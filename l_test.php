@@ -31,11 +31,11 @@ $user = $result->fetch_assoc();
         <?php if($_SESSION["user_role"] == "admin"): ?>
         <!-- Show links for admin -->
         <p>You are logged in as admin</p>
-        <p><a href="l_admin.php">Admin page</a></p>
+        <p><a href="adminDashboard.php">Admin page</a></p>
     <?php else: ?>
         <!-- Show links for normal user -->
         <p>You are logged in as normal user</p>
-        <p><a href="l_user.php">Profile</a></p>
+        <p><a href="index.html">Profile</a></p>
         <?php endif; ?>
        
         <p><a href="logout.php">Log out </a></p>
