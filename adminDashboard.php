@@ -104,94 +104,108 @@
 
             
             
-               <div class="container-fluid whatdoInamethis">
-               <div class="col-md-12">
-    <div class="row">
-        <div class="col-md-2" style="margin-left: -35px;">
-            <?php include('sidenav.php'); ?>
-        </div>
-
-        <
-        <div class="col-md-10">
-            <h4 class="my-5">Admin Dashboard</h4>
-            <div class="row">
-                <div class="col-md-4 my-2">
-                    <div class="bg-success" style="height: 150px;">
-                        <div class="d-flex align-items-center justify-content-between p-3">
-                            <div class="text-white">
-                                Total Admins
-                                <div class="number-placeholder">0</div>
-                            </div>
-                            <i class="fas fa-user-cog fa-3x" style="color: white;"></i>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-md-4 my-2">
-                    <div class="bg-info" style="height: 150px;">
-                        <div class="d-flex align-items-center justify-content-between p-3">
-                            <div class="text-white">
-                                Total Doctors
-                                <div class="number-placeholder">0</div>
-                            </div>
-                            <i class="fas fa-user-md fa-3x" style="color: white;" ></i>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-md-4 my-2">
-                    <div class="bg-warning" style="height: 150px;">
-                        <div class="d-flex align-items-center justify-content-between p-3">
-                            <div class="text-white">
-                                Total Patients
-                                <div class="number-placeholder">0</div>
-                            </div>
-                            <i class="fas fa-user-friends fa-3x" style="color: white;"></i>
-                        </div>
-                        
-                    </div>
-                </div>
+<div class="container-fluid whatdoInamethis">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2" style="margin-left: -35px;">
+                <?php
+                include('sidenav.php');
+                include('connection.php');
+                ?>
             </div>
-            <div class="row">
-                <div class="col-md-4 my-2">
-                    <div class="bg-danger" style="height: 150px;">
-                        <div class="d-flex align-items-center justify-content-between p-3">
-                            <div class="text-white">
-                                Total Records
-                                <div class="number-placeholder">0</div>
+            <div class="col-md-10">
+                <h4 class="my-5">Admin Dashboard</h4>
+                <div class="row">
+                    <div class="col-md-4 my-2">
+                        <div class="bg-success" style="height: 150px;">
+                            <div class="d-flex align-items-center justify-content-between p-3">
+                                <?php 
+                                $admins_query = mysqli_query($conn, "SELECT COUNT(*) AS num_admins FROM users WHERE role='admin'");
+                                $admins_row = mysqli_fetch_assoc($admins_query);
+                                $num_admins = $admins_row['num_admins'];
+                                ?>
+                                <div class="text-white">
+                                    Total Admins
+                                    <div class="number-placeholder"><?php echo $num_admins; ?></div>
+                                </div>
+                                <i class="fas fa-user-cog fa-3x" style="color: white;"></i>
                             </div>
-                            <i class="fas fa-file-alt fa-3x" style="color: white;"></i>
                         </div>
-                        
+                    </div>
+                    <div class="col-md-4 my-2">
+                        <div class="bg-info" style="height: 150px;">
+                            <div class="d-flex align-items-center justify-content-between p-3">
+                                <?php 
+                                $doctors_query = mysqli_query($conn, "SELECT COUNT(*) AS num_doctors FROM doctors");
+                                $doctors_row = mysqli_fetch_assoc($doctors_query);
+                                $num_doctors = $doctors_row['num_doctors'];
+                                ?>
+                                <div class="text-white">
+                                    Total Doctors
+                                    <div class="number-placeholder"><?php echo $num_doctors;?></div>
+                                </div>
+                                <i class="fas fa-user-md fa-3x" style="color: white;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-2">
+                        <div class="bg-warning" style="height: 150px;">
+                            <div class="d-flex align-items-center justify-content-between p-3">
+                                <?php 
+                                $users_query = mysqli_query($conn, "SELECT COUNT(*) AS num_users FROM users WHERE role='user'");
+                                $users_row = mysqli_fetch_assoc($users_query);
+                                $num_users = $users_row['num_users'];
+                                ?>
+                                <div class="text-white">
+                                    Total Patients
+                                    <div class="number-placeholder"><?php echo $num_users;?></div>
+                                </div>
+                                <i class="fas fa-user-friends fa-3x" style="color: white;"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="row">
                 <div class="col-md-4 my-2">
-                    <div class="bg-warning" style="height: 150px;">
-                        <div class="d-flex align-items-center justify-content-between p-3">
-                            <div class="text-white">
-                                Total Job Requests
-                                <div class="number-placeholder">0</div>
-                            </div>
-                            <i class="fas fa-briefcase fa-3x" style="color: white;"></i>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-md-4 my-2">
-                    <div class="bg-success" style="height: 150px;">
-                        <div class="d-flex align-items-center justify-content-between p-3">
-                            <div class="text-white">
-                                Total Income
-                                <div class="number-placeholder">0</div>
-                            </div>
-                            <i class="fas fa-money-bill fa-3x" style="color: white;"></i>
-                        </div>
-                        
-                    </div>
-                </div>
-     
-            
-            </header>
+    <div class="bg-danger" style="height: 150px;">
+        <div class="d-flex align-items-center justify-content-between p-3">
+            <?php 
+            $appointments_query = mysqli_query($conn, "SELECT COUNT(*) AS num_appointments, SUM(consultancyFees) AS total_fees FROM appointment");
+            $appointments_row = mysqli_fetch_assoc($appointments_query);
+            $num_appointments = $appointments_row['num_appointments'];
+            $total_fees = $appointments_row['total_fees'];
+            ?>
+            <div class="text-white">
+                Total Appointments
+                <div class="number-placeholder"><?php echo $num_appointments; ?></div>
+            </div>
+            <i class="fas fa-file-alt fa-3x" style="color: white;"></i>
+        </div>
+    </div>
+</div>
+                    <div
+                    class="col-md-4 my-2">
+      <div class="bg-warning" style="height: 150px;">
+          <div class="d-flex align-items-center justify-content-between p-3">
+          <div class="text-white">
+                    Total Job Requests
+      <div class="number-placeholder">0</div>
+        </div>
+             <i class="fas fa-briefcase fa-3x" style="color: white;"></i>
+               </div>
+               </div>
+               </div>
+               <div class="col-md-4 my-2">
+    <div class="bg-success" style="height: 150px;">
+        <div class="d-flex align-items-center justify-content-between p-3">
+            <div class="text-white">
+                Total Income
+                <div class="number-placeholder">$<?php echo $total_fees; ?></div>
+            </div>
+            <i class="fas fa-money-bill fa-3x" style="color: white;"></i>
+        </div>
+    </div>
+</div>
 
 
 

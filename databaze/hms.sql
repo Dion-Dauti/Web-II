@@ -2,8 +2,8 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3308
--- Generation Time: May 13, 2023 at 11:50 PM
+-- Host: localhost:3307
+-- Generation Time: May 14, 2023 at 05:57 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -31,9 +31,18 @@ CREATE TABLE `appointment` (
   `id` int(11) NOT NULL,
   `doctorSpecialization` varchar(255) DEFAULT NULL,
   `doctorId` int(11) DEFAULT NULL,
-  `userId` int(11) DEFAULT NULL,
+  `userId` bigint(20) DEFAULT NULL,
   `consultancyFees` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `appointment`
+--
+
+INSERT INTO `appointment` (`id`, `doctorSpecialization`, `doctorId`, `userId`, `consultancyFees`) VALUES
+(1, 'Internal Diseases', 2, 1, 50),
+(2, 'Surgery', 1, 36, 200),
+(3, 'Internal Diseases', 2, 6, 20);
 
 -- --------------------------------------------------------
 
@@ -48,6 +57,15 @@ CREATE TABLE `doctors` (
   `docEmail` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `doctors`
+--
+
+INSERT INTO `doctors` (`id`, `specilization`, `doctorName`, `docEmail`) VALUES
+(1, 'Surgery', 'Soren Bo Bostian', 'soren@gmail.com'),
+(2, 'Internal Diseases', 'Bryan Saftler', 'totallynotbrayan@gmail.com'),
+(3, 'Orthopedics', 'Matthew Bayliss', 'matthew12:1@gmail.com');
+
 -- --------------------------------------------------------
 
 --
@@ -59,6 +77,15 @@ CREATE TABLE `doctorspecilization` (
   `specilization` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `doctorspecilization`
+--
+
+INSERT INTO `doctorspecilization` (`id`, `specilization`) VALUES
+(2, 'Internal Diseases'),
+(3, 'Orthopedics'),
+(1, 'Surgery');
+
 -- --------------------------------------------------------
 
 --
@@ -67,11 +94,20 @@ CREATE TABLE `doctorspecilization` (
 
 CREATE TABLE `tblmedicalhistory` (
   `ID` int(10) NOT NULL,
-  `PatientId` int(10) DEFAULT NULL,
+  `PatientId` bigint(20) DEFAULT NULL,
   `BloodPreasure` tinyint(1) DEFAULT NULL,
   `BloodSugar` tinyint(1) NOT NULL,
   `CreationDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tblmedicalhistory`
+--
+
+INSERT INTO `tblmedicalhistory` (`ID`, `PatientId`, `BloodPreasure`, `BloodSugar`, `CreationDate`) VALUES
+(1, 1, 1, 0, '2023-05-14 15:54:18'),
+(2, 36, 0, 0, '2023-05-14 15:54:18'),
+(3, 6, 1, 1, '2023-05-14 15:54:18');
 
 -- --------------------------------------------------------
 
@@ -130,25 +166,31 @@ INSERT INTO `users` (`id`, `Name`, `Last_name`, `Email`, `Password_hash`, `role`
 -- Indexes for table `appointment`
 --
 ALTER TABLE `appointment`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `doctorSpecialization` (`doctorSpecialization`),
+  ADD KEY `doctorId` (`doctorId`),
+  ADD KEY `userId` (`userId`);
 
 --
 -- Indexes for table `doctors`
 --
 ALTER TABLE `doctors`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `specilization` (`specilization`);
 
 --
 -- Indexes for table `doctorspecilization`
 --
 ALTER TABLE `doctorspecilization`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `specilization` (`specilization`);
 
 --
 -- Indexes for table `tblmedicalhistory`
 --
 ALTER TABLE `tblmedicalhistory`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `PatientId` (`PatientId`);
 
 --
 -- Indexes for table `users`
@@ -166,6 +208,30 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `appointment`
+--
+ALTER TABLE `appointment`
+  ADD CONSTRAINT `appointment_ibfk_1` FOREIGN KEY (`doctorSpecialization`) REFERENCES `doctors` (`specilization`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `appointment_ibfk_2` FOREIGN KEY (`doctorId`) REFERENCES `doctors` (`id`) ON DELETE SET NULL ON UPDATE SET NULL,
+  ADD CONSTRAINT `appointment_ibfk_3` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `doctors`
+--
+ALTER TABLE `doctors`
+  ADD CONSTRAINT `constrain_doctor` FOREIGN KEY (`specilization`) REFERENCES `doctorspecilization` (`specilization`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `tblmedicalhistory`
+--
+ALTER TABLE `tblmedicalhistory`
+  ADD CONSTRAINT `adskjnfaj` FOREIGN KEY (`PatientId`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
