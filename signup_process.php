@@ -3,6 +3,8 @@
 /*print_r($_POST); //masi i japim te dhenat ne nje forme na dalin te faqja */
 
 
+
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Validate email
     $email = $_POST["email"];
@@ -16,8 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
    // Validate password
    $password = $_POST["password"];
-   $valid_password = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/";
-   if (!preg_match($valid_password, $password)) {
+   //$valid_password = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/";
+   if ($password<8) {
        $error_message = "Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, and one digit";
        echo "<p style='color:red;'>$error_message</p>";
        exit();
@@ -77,13 +79,23 @@ if ($user) { // If email already exists
     if (!$result) {
         die('Error executing MySQLi statement: ' . mysqli_error($mysqli));
     }
+
+
+
+
+
     // Set cookie and redirect user to home page
     setcookie("user_email", $email, time() + (86400 * 30), "/");
     header('Location: login.php');
     exit();
 }
 
+
+
 }
+
+
+
 
 
 

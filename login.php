@@ -33,6 +33,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST"  ){
 //sesionet perdoren per te mbajtur ne mend vlerat ne mes te browser request
 
 
+
+
+
 ?>
 
 
@@ -48,8 +51,13 @@ if($_SERVER["REQUEST_METHOD"] === "POST"  ){
             font-family: 'Times New Roman', Times, serif;
             box-sizing: border-box;
             margin: 50px;
-            margin-right: 250px;
-            margin-left: 250px;
+            margin-right: 500px;
+            margin-left: 500px;
+            margin-top:50px;
+            background-color: lightcyan;
+        }
+        img{
+            height:50px;
         }
         
         #email{
@@ -86,16 +94,33 @@ if($_SERVER["REQUEST_METHOD"] === "POST"  ){
        
 
         h1{
-            color: blue;
+            color:blue;
+            
             
         }
 
         label{
             color:blue;
             
+            
         }
         .signup{
             text-decoration: none;
+        }
+
+        #background{
+           background-image: url("images/form.jpg");
+           opacity: 0.2;
+           position:absolute;
+           top:0;
+           bottom:0;
+           left:0;
+           right:0;
+           background-repeat: no-repeat;
+           background-size: cover;
+           z-index: -1;
+
+     
         }
         
     </style>
@@ -103,6 +128,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST"  ){
     
     
     <body>
+        <div id = "background"></div>
+        <div>
+            <img src="images/logo.png">
+        </div>
+        
+        <br>
         <h1><b>Log In<b></h1>
         <?php if($is_invalid): ?>
             <em>Invalid login</em>

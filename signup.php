@@ -5,60 +5,22 @@
 <head>
     <title>Sign Up</title>
     <meta charset="UTF - 8">
-    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
-    <script defer>
-        const validation = new justvalidate("#signup");
-
-validation
-    .addField("#name", [
-        {
-            rule: "required"
-        }
-
-
-    ])
+  
     
-    .addField("#email", [
-
-        {
-            rule:"required"
-        },
-        {
-            rule: "email"
-        }
-    ])
-
-    .addField("#password", [
-        {
-            rule: "required"
-        },{
-        rule: "password"
-        }
-
-
-    ])
-
-    .addField("#password_confirmation", [
-
-    {
-        validator: (value,fields) =>{
-            return value === fields["password"].elem.value;
-        },
-        errorMessage: "Passwords should match"
-    }
-    ])
-    .onSuccess((event => {
-        document.getElementById("signup").submit();
-        
-    }));
-
-    </script>
     <style>
         body{
             font-family: 'Times New Roman', Times, serif;
             box-sizing: border-box;
-            margin: 50px;
+            margin-left: 500px;
+            margin-right: 500px;
+            background-color: lightcyan;
+            margin-top:50px;
         }
+
+       img{
+        height: 50px;
+        
+       }
         #name{
             background-color:white;
             outline-color:aqua;
@@ -137,8 +99,29 @@ validation
             color:blue;
             
         }
+
+        .background{
+           background-image: url("images/form.jpg");
+           opacity: 0.2;
+           position:absolute;
+           top:0;
+           bottom:0;
+           left:0;
+           right:0;
+           background-repeat: no-repeat;
+           background-size: cover;
+           z-index: -1;
+
+     
+        }
     </style>
     <body>
+        <div class="background"></div>
+        <div>
+            <img src = "images/logo.png">
+        </div>
+        <br>
+
         
 
         <h1 ><b>Sign Up</b></h1>
