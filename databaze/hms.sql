@@ -47,7 +47,7 @@ INSERT INTO `appointment` (`id`, `doctorSpecialization`, `doctorId`, `userId`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doctors`
+-- Table structure for table `Doctors`
 --
 
 CREATE TABLE `doctors` (
@@ -58,7 +58,7 @@ CREATE TABLE `doctors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `doctors`
+-- Dumping data for table `Doctors`
 --
 
 INSERT INTO `doctors` (`id`, `specilization`, `doctorName`, `docEmail`) VALUES
@@ -69,7 +69,7 @@ INSERT INTO `doctors` (`id`, `specilization`, `doctorName`, `docEmail`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doctorspecilization`
+-- Table structure for table `DoctorSpecilization`
 --
 
 CREATE TABLE `doctorspecilization` (
@@ -78,7 +78,7 @@ CREATE TABLE `doctorspecilization` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `doctorspecilization`
+-- Dumping data for table `DoctorSpecilization`
 --
 
 INSERT INTO `doctorspecilization` (`id`, `specilization`) VALUES
