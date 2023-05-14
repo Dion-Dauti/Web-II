@@ -72,20 +72,16 @@
                <div class="header-bottom wow fadeIn">
    <div class="container">
       <nav class="main-menu">
-         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-               <i class="fa fa-bars" aria-hidden="true"></i>
-            </button>
-         </div>
-         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-               <li><a class="active" href="index.html">Home</a></li>
-               <li><a data-scroll href="#about">About us</a></li>
-               <li><a data-scroll href="#service">Pacient</a></li>
-               <li><a href="doctors.html">Doctors</a></li>
-               <li><a data-scroll href="#getintouch">Contact</a></li>
-            </ul>
-         </div>
+      <div style="background-color: #157fda;">
+    <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: center;">
+        <li><a class="active" href="index.html" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Home</a></li>
+        <li><a data-scroll href="#about" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">About us</a></li>
+        <li><a data-scroll href="#service" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Pacient</a></li>
+        <li><a href="doctors.html" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Doctors</a></li>
+        <li><a data-scroll href="#getintouch" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Contact</a></li>
+    </ul>
+</div>
+
       </nav>
       <div class="serch-bar">
          <div id="custom-search-input">
