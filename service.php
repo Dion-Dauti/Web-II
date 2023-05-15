@@ -71,6 +71,7 @@
                               <li><a class="active" href="index.html">Home</a></li>
                               <li><a  href="about.html">About us</a></li>
                               <li><a  href="service.html">Services</a></li>
+                             
                               <li><a  href="doctors.html">Doctors</a></li>
                               <li><a  href="price.html">Price</a></li>
                               <li><a  href="testimonials.html">Testimonials</a></li>
@@ -93,6 +94,20 @@
                   </div>
                </div>
             </header>
+
+
+           <li class="dropdownn">
+               <a href="service.html" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+               <div class="dropdownn-menu">
+                  <ul>
+                     <li><a href="#">Service 1</a></li>
+                     <li><a href="#">Service 2</a></li>
+                     <li><a href="#">Service 3</a></li>
+                  </ul>
+               </div>
+        
+          </li>>
+
 
   
 
