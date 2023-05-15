@@ -2,10 +2,10 @@
 include('connection.php');
 
 // Get the admin ID from the AJAX request
-$adminId = $_POST['adminId'];
+$patientId = $_POST['patientId']; 
 
-// Remove the admin from the database
-$query = "DELETE FROM users WHERE id = $adminId";
+// Remove the patient from the database
+$query = "DELETE FROM users WHERE id = $patientId";
 
 if (mysqli_query($conn, $query)) {
    
