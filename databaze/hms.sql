@@ -175,8 +175,8 @@ ALTER TABLE `appointment`
 -- Indexes for table `doctors`
 --
 ALTER TABLE `doctors`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `specilization` (`specilization`);
+  ADD PRIMARY KEY (`id`);
+  
 
 --
 -- Indexes for table `doctorspecilization`

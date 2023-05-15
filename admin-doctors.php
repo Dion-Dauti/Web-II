@@ -64,10 +64,10 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
    <!-- [if lt IE 9] -->
    <script>
-      function removePatient(patientId) {
+      function removeDoctor(doctorId) {
          // Send an AJAX request to delete the patient
          $.ajax({
-            url: 'remove_patient.php',
+            url: 'remove_doctor.php',
             method: 'POST',
             data: { patientId: patientId },
             success: function(response) {
@@ -138,7 +138,7 @@
 <div class="list-group bg-info" style="height: 100vh;">
 <a href="adminDashboard.php" class="list-group-item list-group-item-action bg-info text-center text-white">Dashboard</a>
 <a href="admins.php" class="list-group-item list-group-item-action bg-info text-center text-white">Administrators</a>
-<a href="admin-doctors.php" class="list-group-item list-group-item-action bg-info text-center text-white">Doctors</a>
+<a href="" class="list-group-item list-group-item-action bg-info text-center text-white">Doctors</a>
 <a href="patients.php" class="list-group-item list-group-item-action bg-info text-center text-white">Patient</a>
 </div>
 <?php
@@ -146,14 +146,14 @@
                ?>
 </div>
 <div class="col-md-10">
-<h2>All Patients</h2>
+<h2>All Doctors</h2>
 <div class="table-scroll" style="max-height: 400px; overflow: auto;">
 <table class="table ">
 <thead>
 <tr>
 <th>ID</th>
 <th>Name</th>
-<th>Last Name</th>
+<th>Specialzation</th>
 <th>Email</th>
 <th>Action</th>
 </tr>
@@ -161,19 +161,19 @@
 <tbody>
 <?php
                         // Fetch all patients from the database
-                        $query = mysqli_query($conn, "SELECT * FROM users WHERE role='user'");
+                        $query = mysqli_query($conn, "SELECT * FROM doctors");
                         while ($row = mysqli_fetch_assoc($query)) {
-                           $patientId = $row['id'];
-                           $patientName = $row['Name'];
-                           $patientLastName = $row['Last_name'];
-                           $patientEmail = $row['Email'];
+                           $doctorId = $row['id'];
+                           $doctorName = $row['doctorName'];
+                           $doctorSpecialzation = $row['specilization'];
+                           $doctorEmail = $row['docEmail'];
                         ?>
 <tr>
-<td><?php echo $patientId; ?></td>
-<td><?php echo $patientName; ?></td>
-                                 <td><?php echo $patientLastName; ?></td>
-                                 <td><?php echo $patientEmail; ?></td>
-                                 <td><button class="btn btn-danger" onclick="removePatient(<?php echo $patientId; ?>)"><i class="fas fa-times"></i></button></td>
+<td><?php echo $doctorId; ?></td>
+<td><?php echo $doctorName; ?></td>
+                                 <td><?php echo $doctorSpecialzation; ?></td>
+                                 <td><?php echo $doctorEmail; ?></td>
+                                 <td><button class="btn btn-danger" onclick="removeDoctor(<?php echo $doctorId; ?>)"><i class="fas fa-times"></i></button></td>
                               </tr>
                            <?php
                            }
@@ -181,24 +181,21 @@
                         </tbody>
                      </table>
                   </div>
-                  <h2>Add New Patient</h2>
-                  <form action="add_patient.php" method="post">
+                  <h2>Add New Doctor</h2>
+                  <form action="add_doctor.php" method="post">
                      <div class="form-group">
-                        <label for="patientName">Name</label>
-                        <input type="text" class="form-control" id="patientName" name="patientName" required>
+                        <label for="doctorName">Name</label>
+                        <input type="text" class="form-control" id="doctorName" name="doctorName" required>
                      </div>
                      <div class="form-group">
-                        <label for="patientLastName">Last Name</label>
-                        <input type="text" class="form-control" id="patientLastName" name="patientLastName" required>
+                        <label for="doctorSpecialzation">Specialzation</label>
+                        <input type="text" class="form-control" id="doctorSpecialzation" name="doctorSpecialzation" required>
                      </div>
                      <div class="form-group">
-                        <label for="patientEmail">Email</label>
-                        <input type="email" class="form-control" id="patientEmail" name="patientEmail" required>
+                        <label for="doctorEmail">Email</label>
+                        <input type="email" class="form-control" id="doctorEmail" name="doctorEmail"style="margin-bottom: 10px;" required>
                      </div>
-                     <div class="form-group">
-                        <label for="patientPassword">Password</label>
-                        <input type="password" class="form-control" id="patientPassword" name="patientPassword" required>
-                     </div>
+                     
                      <button type="submit" class="btn btn-primary">Add Patient</button>
                   </form>
                </div>
