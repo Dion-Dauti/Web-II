@@ -2136,3 +2136,66 @@ select.mobile-device {
     border-color: rgba(255, 255, 255, 0.6);
     color: rgba(255, 255, 255, 0.6);
 }
+/* Dropdown menu styles */
+
+.dropdownn:hover .dropdownn-menu {
+    display: block;
+  }
+  
+  .dropdownn-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    list-style: none;
+  }
+  
+  .dropdownn-menu li {
+    display: block;
+  }
+  
+  .dropdownn-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .dropdownn-menu a:hover {
+    background-color: #f6f6f6;
+  }
+  
+  /* Other styles */
+  
+  nav {
+    background-color: #eee;
+    padding: 10px 20px;
+  }
+  
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    display: inline-block;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .menu a:hover {
+    background-color: #f6f6f6;
+  }
+  

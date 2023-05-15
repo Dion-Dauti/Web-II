@@ -1,15 +1,15 @@
 <?php
 include('connection.php');
 
+$doctorId = $_POST['doctorId']; 
 
-$adminId = $_POST['adminId'];
 
-$query = "DELETE FROM users WHERE id = $adminId";
+$query = "DELETE FROM doctors WHERE id = $doctorId";
 
 if (mysqli_query($conn, $query)) {
    
 } else {
- 
+   
    echo "Error: " . mysqli_error($conn);
 }
 

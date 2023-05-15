@@ -32,7 +32,7 @@
    </head>
     
         <body class="clinic_version">
-            <!-- LOADER -->
+            <!-- LOADER elma-->
             <div id="preloader">
                <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
             </div>

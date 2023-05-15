@@ -69,12 +69,22 @@
                         <div id="navbar" class="navbar-collapse collapse">
                            <ul class="nav navbar-nav">
                               <li><a class="active" href="index.html">Home</a></li>
+<<<<<<< HEAD:testimonials.php
                               <li><a  href="about.php">About us</a></li>
                               <li><a  href="service.php">Service</a></li>
                               <li><a  href="doctors.php">Doctors</a></li>
                               <li><a  href="price.php">Price</a></li>
                               <li><a  href="testimonials.php">Testimonials</a></li>
                               <li><a data-scroll href="contact.php">Contact</a></li>
+=======
+                              <li><a  href="about.html">About us</a></li>
+                            <li><a  href="service.html">Services</a></li>
+                        
+                         <li><a  href="doctors.html">Doctors</a></li>
+                              <li><a  href="price.html">Price</a></li>
+                              <li><a  href="testimonials.html">Testimonials</a></li>
+                              <li><a data-scroll href="contact.html">Contact</a></li>
+>>>>>>> 401d767fe5c8afcd57b2a8574559a700003510ca:testimonials.html
                            </ul>
                         </div>
                      </nav>

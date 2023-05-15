@@ -1287,6 +1287,7 @@ body.clinic_version .desc {
 	
 }
 
+
 @media (min-width:768px) and (max-width:991px) {
 
 nav.main-menu .navbar-header {float: left;position: relative;top: 8px;right: 0;background: transparent;width: auto;height: auto;}	
@@ -1344,7 +1345,10 @@ nav.main-menu .navbar-toggle {border: solid #fff 2px;}
 .info-inner {float: left;margin-left: 30px;}
 
 }
-
+.table-scroll{
+    overflow: auto;
+    max-height: 400px; /* Adjust the maximum height as needed */
+}
 
 
 

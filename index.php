@@ -89,8 +89,23 @@
                      <ul class="nav navbar-nav">
                         <li><a class="active" href="index.html">Home</a></li>
 
+<<<<<<< HEAD:index.php
                         <li><a data-scroll href="about.php">About us</a></li>
                         <li><a data-scroll href="service.php">Services</a></li>
+=======
+                        <li><a data-scroll href="about.html">About us</a></li>
+                        <li class="dropdownn">
+                           <a href="service.html" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+                           <div class="dropdownn-menu" style="display: none;">
+                              <ul>
+                                 <li><a href="servicess.html">Change data</a></li>
+                                 <li><a href="#">Service 2</a></li>
+                                 <li><a href="#">Service 3</a></li>
+                              </ul>
+                           </div>
+                        </li>
+                         
+>>>>>>> 401d767fe5c8afcd57b2a8574559a700003510ca:index.html
                         <li><a   href="doctors.html">Doctors</a></li>
                         <li><a data-scroll href="price.php">Price</a></li>
                   <li><a data-scroll href="testimonials.php">Testimonials</a></li>
@@ -105,16 +120,40 @@
                        
                       <!--e shtojme nje buton dhe mrena butonit linkun per logout.php-->
                      
+<<<<<<< HEAD:index.php
                   
+=======
+                     </ul>
+>>>>>>> 401d767fe5c8afcd57b2a8574559a700003510ca:index.html
                   </div>
  
                </nav>
                
 
+<<<<<<< HEAD:index.php
               
+=======
+
+               
+
+               <div class="serch-bar">
+                  <div id="custom-search-input">
+                     <div class="input-group col-md-12">
+                        <input type="text" class="form-control input-lg" placeholder="Search" />
+                        <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                        </span>
+                     </div>
+                  </div>
+               </div>
+>>>>>>> 401d767fe5c8afcd57b2a8574559a700003510ca:index.html
             </div>
          </div>
       </header>
+
+
 
       
       
@@ -270,3 +309,16 @@
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
    </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+   $(document).ready(function() {
+      $('.dropdownn').hover(
+         function() {
+            $(this).find('.dropdownn-menu').css('display', 'block');
+         },
+         function() {
+            $(this).find('.dropdownn-menu').css('display', 'none');
+         }
+      );
+   });
+</script>
