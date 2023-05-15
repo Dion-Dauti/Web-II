@@ -75,27 +75,30 @@
                         <li><a class="active" href="index.html">Home</a></li>
 
                         <li><a data-scroll href="about.html">About us</a></li>
-                        <li class="dropdown">
-                           <li><a  href="service.html">Services</a></li>
-                           <ul class="dropdown-menu">
-                             <li><a href="#">Service 1</a></li>
-                             <li><a href="#">Service 2</a></li>
-                             <li><a href="#">Service 3</a></li>
-                           </ul>
-                         </li>
-
+                        <li class="dropdownn">
+                           <a href="service.html" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+                           <div class="dropdownn-menu" style="display: none;">
+                              <ul>
+                                 <li><a href="#">Service 1</a></li>
+                                 <li><a href="#">Service 2</a></li>
+                                 <li><a href="#">Service 3</a></li>
+                              </ul>
+                           </div>
+                        </li>
+                         
                         <li><a   href="doctors.html">Doctors</a></li>
                         <li><a data-scroll href="price.html">Price</a></li>
                   <li><a data-scroll href="testimonials.html">Testimonials</a></li>
                         <li><a data-scroll href="contact.html">Contact</a></li>
                       <!--e shtojme nje buton dhe mrena butonit linkun per logout.php-->
-                      <?php
-        
-      ?>
+                     
                      </ul>
                   </div>
  
                </nav>
+               
+
+
                
 
                <div class="serch-bar">
@@ -113,6 +116,8 @@
             </div>
          </div>
       </header>
+
+
 
       
       
@@ -268,3 +273,16 @@
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
    </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+   $(document).ready(function() {
+      $('.dropdownn').hover(
+         function() {
+            $(this).find('.dropdownn-menu').css('display', 'block');
+         },
+         function() {
+            $(this).find('.dropdownn-menu').css('display', 'none');
+         }
+      );
+   });
+</script>

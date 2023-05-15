@@ -2138,11 +2138,11 @@ select.mobile-device {
 }
 /* Dropdown menu styles */
 
-.dropdown:hover .dropdown-menu {
+.dropdownn:hover .dropdownn-menu {
     display: block;
   }
   
-  .dropdown-menu {
+  .dropdownn-menu {
     display: none;
     position: absolute;
     top: 100%;
@@ -2156,18 +2156,18 @@ select.mobile-device {
     list-style: none;
   }
   
-  .dropdown-menu li {
+  .dropdownn-menu li {
     display: block;
   }
   
-  .dropdown-menu a {
+  .dropdownn-menu a {
     display: block;
     padding: 10px 20px;
     color: #333;
     text-decoration: none;
   }
   
-  .dropdown-menu a:hover {
+  .dropdownn-menu a:hover {
     background-color: #f6f6f6;
   }
   
