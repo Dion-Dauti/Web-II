@@ -69,7 +69,7 @@
          $.ajax({
             url: 'remove_doctor.php',
             method: 'POST',
-            data: { patientId: patientId },
+            data: { doctorId: doctorId },
             success: function(response) {
                // Reload the page after successful deletion
                location.reload();
