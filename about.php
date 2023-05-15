@@ -69,27 +69,16 @@
                         <div id="navbar" class="navbar-collapse collapse">
                            <ul class="nav navbar-nav">
                               <li><a class="active" href="index.html">Home</a></li>
-                              <li><a  href="about.html">About us</a></li>
-                              <li><a  href="service.html">Services</a></li>
-                              <li><a  href="doctors.html">Doctors</a></li>
-                              <li><a  href="price.html">Price</a></li>
-                              <li><a  href="testimonials.html">Testimonials</a></li>
-                              <li><a data-scroll href="contact.html">Contact</a></li>
+                              <li><a  href="about.php">About us</a></li>
+                              <li><a  href="service.php">Services</a></li>
+                              <li><a  href="doctors.php">Doctors</a></li>
+                              <li><a  href="price.php">Price</a></li>
+                              <li><a  href="testimonials.php">Testimonials</a></li>
+                              <li><a data-scroll href="contact.php">Contact</a></li>
                            </ul>
                         </div>
                      </nav>
-                     <div class="serch-bar">
-                        <div id="custom-search-input">
-                           <div class="input-group col-md-12">
-                              <input type="text" class="form-control input-lg" placeholder="Search" />
-                              <span class="input-group-btn">
-                              <button class="btn btn-info btn-lg" type="button">
-                              <i class="fa fa-search" aria-hidden="true"></i>
-                              </button>
-                              </span>
-                           </div>
-                        </div>
-                     </div>
+                    
                   </div>
                </div>
             </header>
@@ -103,53 +92,83 @@
   
  
 
+            <div id="about" class="section wow fadeIn">
+               <div class="container">
+                  <div class="heading">
+                     <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
+                     <h2>The Specialist Clinic</h2>
+                  </div>
+                  <!-- end title -->
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="message-box">
+                           <h4>What We Do</h4>
+                           <h2>Clinic Service</h2>
+                           <p class="lead">Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
+                           <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  </p>
+                           <a href="service.html" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Learn More</a>
+                        </div>
+                        <!-- end messagebox -->
+                     </div>
+                     <!-- end col -->
+                     <div class="col-md-6">
+                        <div class="post-media wow fadeIn">
+                           <img src="images/about_03.jpg" alt="" class="img-responsive">
+                           <a href="https://youtu.be/OJuQuANr0F8" data-rel="prettyPhoto[gal]" class="playbutton"><i class="flaticon-play-button"></i></a>
+                        </div>
+                        <!-- end media -->
+                     </div>
+                     <!-- end col -->
+                  </div>
+                  <!-- end row -->
+                  <hr class="hr1">
+                  <div class="row">
+                     <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="service-widget">
+                           <div class="post-media wow fadeIn">
+                              <a href="images/clinic_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                              <img src="images/clinic_01.jpg" alt="" class="img-responsive">
+                           </div>
+                           <h3>Digital Control Center</h3>
+                        </div>
+                        <!-- end service -->
+                     </div>
+                     <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="service-widget">
+                           <div class="post-media wow fadeIn">
+                              <a href="images/clinic_02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                              <img src="images/clinic_02.jpg" alt="" class="img-responsive">
+                           </div>
+                           <h3>Hygienic Operating Room</h3>
+                        </div>
+                        <!-- end service -->
+                     </div>
+                     <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="service-widget">
+                           <div class="post-media wow fadeIn">
+                              <a href="images/clinic_03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                              <img src="images/clinic_03.jpg" alt="" class="img-responsive">
+                           </div>
+                           <h3>Specialist Physicians</h3>
+                        </div>
+                        <!-- end service -->
+                     </div>
+                     <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="service-widget">
+                           <div class="post-media wow fadeIn">
+                              <a href="images/clinic_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                              <img src="images/clinic_01.jpg" alt="" class="img-responsive">
+                           </div>
+                           <h3>Digital Control Center</h3>
+                        </div>
+                        <!-- end service -->
+                     </div>
+                  </div>
+                  <!-- end row -->
+               </div>
+               <!-- end container -->
+            </div>
 
-            <div id="getintouch" class="section wb wow fadeIn" style="padding-bottom:0;">
-                <div class="container">
-                   <div class="heading">
-                      <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
-                      <h2>Get in Touch</h2>
-                   </div>
-                </div>
-                <div class="contact-section">
-                   <div class="form-contant">
-                      <form id="ajax-contact" action="assets/mailer.php" method="post">
-                         <div class="row">
-                            <div class="col-md-6">
-                               <div class="form-group in_name">
-                                  <input type="text" class="form-control" placeholder="Name" required="required">
-                               </div>
-                            </div>
-                            <div class="col-md-6">
-                               <div class="form-group in_email">
-                                  <input type="email" class="form-control" placeholder="E-mail" required="required">
-                               </div>
-                            </div>
-                            <div class="col-md-6">
-                               <div class="form-group in_email">
-                                  <input type="tel" class="form-control" id="phone" placeholder="Phone" required="required">
-                               </div>
-                            </div>
-                            <div class="col-md-6">
-                               <div class="form-group in_email">
-                                  <input type="text" class="form-control" id="subject" placeholder="Subject" required="required">
-                               </div>
-                            </div>
-                            <div class="col-md-12">
-                               <div class="form-group in_message"> 
-                                  <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required"></textarea>
-                               </div>
-                               <div class="actions">
-                                  <input type="submit" value="Send Message" name="submit" id="submitButton" class="btn small" title="Submit Your Message!">
-                               </div>
-                            </div>
-                         </div>
-                      </form>
-                   </div>
-                   <div id="googleMap" style="width:100%;height:450px;"></div>
-                </div>
-             </div>
-       
 
 
 
@@ -218,8 +237,8 @@
                    <li><a href=""><i class="fa fa-rss"></i></a></li>
                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                   <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-                   <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                   <li><a href="https://support.google.com/answer/2451065?hl=en"><i class="fa fa-google-plus"></i></a></li>
+                   <li><a href="https://www.youtube.com/watch?v=vSHkMAMRRV4"><i class="fa fa-youtube"></i></a></li>
                    <li><a href=""><i class="fa fa-pinterest"></i></a></li>
                 </ul>
              </div>

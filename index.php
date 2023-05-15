@@ -1,3 +1,4 @@
+<?php session_start();?>
 !DOCTYPE html>
 <html lang="en">
    <!-- Basic -->
@@ -29,7 +30,21 @@
    <!-- Modernizer for Portfolio -->
    <script src="js/modernizer.js"></script>
    <!-- [if lt IE 9] -->
+   <script src="https://kit.fontawesome.com/72b475b245.js" crossorigin="anonymous"></script>
    </head>
+
+   <style>
+
+/* ikona per shfaqjen e emrit */
+.userinfo{
+   margin-left:500px;
+   margin-top: 5px;
+   
+}
+   </style>
+
+  
+
    
    <body class="clinic_version">
       <!-- LOADER
@@ -74,34 +89,29 @@
                      <ul class="nav navbar-nav">
                         <li><a class="active" href="index.html">Home</a></li>
 
-                        <li><a data-scroll href="about.html">About us</a></li>
-                        <li><a data-scroll href="service.html">Services</a></li>
+                        <li><a data-scroll href="about.php">About us</a></li>
+                        <li><a data-scroll href="service.php">Services</a></li>
                         <li><a   href="doctors.html">Doctors</a></li>
-                        <li><a data-scroll href="price.html">Price</a></li>
-                  <li><a data-scroll href="testimonials.html">Testimonials</a></li>
-                        <li><a data-scroll href="contact.html">Contact</a></li>
+                        <li><a data-scroll href="price.php">Price</a></li>
+                  <li><a data-scroll href="testimonials.php">Testimonials</a></li>
+                        <li><a data-scroll href="contact.php">Contact</a>      </li>
+                        <div class="userinfo">
+                     <?php include("showtheinfo.php"); ?>
+                       </div>
+                        
+                  
+                        
+                        
+                       
                       <!--e shtojme nje buton dhe mrena butonit linkun per logout.php-->
-                      <?php
-        
-      ?>
-                     </ul>
+                     
+                  
                   </div>
  
                </nav>
                
 
-               <div class="serch-bar">
-                  <div id="custom-search-input">
-                     <div class="input-group col-md-12">
-                        <input type="text" class="form-control input-lg" placeholder="Search" />
-                        <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                        </span>
-                     </div>
-                  </div>
-               </div>
+              
             </div>
          </div>
       </header>
@@ -241,8 +251,8 @@
                         <li><a href=""><i class="fa fa-rss"></i></a></li>
                         <li><a href=""><i class="fa fa-facebook"></i></a></li>
                         <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="support.google.com/answer/2451065?hl=en"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="https://www.youtube.com/watch?v=vSHkMAMRRV4"><i class="fa fa-youtube"></i></a></li>
                         <li><a href=""><i class="fa fa-pinterest"></i></a></li>
                      </ul>
                   </div>

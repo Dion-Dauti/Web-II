@@ -7,7 +7,7 @@
 
 //hapi i pare - konektimi me server
 
-$dbhost = '127.0.0.1:3308';
+$dbhost = '127.0.0.1:3310';
 $dbuser="root";
 $dbpass = 'root';
 $dbname = 'hms';
