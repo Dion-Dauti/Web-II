@@ -27,7 +27,13 @@
    <!-- Custom CSS -->
    <link rel="stylesheet" href="css/custom.css">
    <!-- Modernizer for Portfolio -->
+  
+         
+  
    <script src="js/modernizer.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ezsaFV3cOeW+AYBIHmeUVeL8hT/Hf+m8ohF6QAeY3wv4IhXHto3Zy+x02yoW6oSn" crossorigin="anonymous">
+   <script src="https://kit.fontawesome.com/72b475b245.js" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
    <!-- [if lt IE 9] -->
    </head>
     
@@ -154,7 +160,7 @@
                          <div class="appointment-form">
                             <h3><span>+</span> Book Appointment</h3>
                             <div class="form">
-                               <form action="index.html">
+                               <form action="submit_appoitment.php" method="post" >
                                   <fieldset>
                                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="row">
@@ -193,8 +199,23 @@
                                            <div class="form-group">
                                               <select class="form-control">
                                                  <option>Doctor Name</option>
-                                                 <option>Mr.XYZ</option>
-                                                 <option>Mr.ABC</option>
+                                                
+                                    <?php
+                                    // Assuming you have a database connection established
+                                    include('connection.php');
+                                    // Fetch doctors' names from the database
+                                    $query = "SELECT doctorName FROM doctors";
+                                    $result = mysqli_query($conn, $query);
+
+                                    // Generate HTML code with the doctors' names
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $doctorName = $row['doctorName'];
+                                        echo "<option>$doctorName</option>";
+                                    }
+
+                                    // Close the database connection
+                                    mysqli_close($conn);
+                                    ?>
                                               </select>
                                            </div>
                                         </div>
@@ -307,7 +328,7 @@
 
 
 
-
+ 
 
 
 
