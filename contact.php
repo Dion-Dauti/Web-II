@@ -1,93 +1,242 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+   <!-- Basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- Mobile Metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- Site Metas -->
+   <title>Price</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- Site Icons -->
+   <link rel="shortcut icon" href="images/fevicon.ico.png" type="image/x-icon" />
+   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- Site CSS -->
+   <link rel="stylesheet" href="style.css">
+   <!-- Colors CSS -->
+   <link rel="stylesheet" href="css/colors.css">
+   <!-- ALL VERSION CSS -->
+   <link rel="stylesheet" href="css/versions.css">
+   <!-- Responsive CSS -->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/custom.css">
+   <!-- Modernizer for Portfolio -->
+   <script src="js/modernizer.js"></script>
+   <!-- [if lt IE 9] -->
+   </head>
+    
+        <body class="clinic_version">
+            <!-- LOADER -->
+            <div id="preloader">
+               <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
+            </div>
+            <!-- END LOADER -->
+            <header>
+               <div class="header-top wow fadeIn">
+                  <div class="container">
+                     <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="image"></a>
+                     <div class="right-header">
+                        <div class="header-info">
+                           <div class="info-inner">
+                              <span class="icontop"><img src="images/phone-icon.png" alt="#"></span>
+                              <span class="iconcont"><a href="tel:800 123 456">800 123 456</a></span>	
+                           </div>
+                           <div class="info-inner">
+                              <span class="icontop"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                              <span class="iconcont"><a data-scroll href="mailto:info@yoursite.com">info@Lifecare.com</a></span>	
+                           </div>
+                           <div class="info-inner">
+                              <span class="icontop"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                              <span class="iconcont"><a data-scroll href="#">Daily: 7:00am - 8:00pm</a></span>	
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="header-bottom wow fadeIn">
+                  <div class="container">
+                     <nav class="main-menu">
+                        <div class="navbar-header">
+                           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                        </div>
+                        
+                        <div id="navbar" class="navbar-collapse collapse">
+                           <ul class="nav navbar-nav">
+                              <li><a class="active" href="index.html">Home</a></li>
+                              <li><a  href="about.php">About us</a></li>
+                              <li><a  href="service.php">Services</a></li>
+                              <li><a  href="doctors.php">Doctors</a></li>
+                              <li><a  href="price.php">Price</a></li>
+                              <li><a  href="testimonials.php">Testimonials</a></li>
+                              <li><a data-scroll href="contact.php">Contact</a></li>
+                           </ul>
+                        </div>
+                     </nav>
+                     
+                  </div>
+               </div>
+            </header>
 
-if(!$_POST) exit;
-
-// Email address verification, do not edit.
-function isEmail($email) {
-	return(preg_match("/^[-_.[:alnum:]]+@((([[:alnum:]]|[[:alnum:]][[:alnum:]-]*[[:alnum:]])\.)+(ad|ae|aero|af|ag|ai|al|am|an|ao|aq|ar|arpa|as|at|au|aw|az|ba|bb|bd|be|bf|bg|bh|bi|biz|bj|bm|bn|bo|br|bs|bt|bv|bw|by|bz|ca|cc|cd|cf|cg|ch|ci|ck|cl|cm|cn|co|com|coop|cr|cs|cu|cv|cx|cy|cz|de|dj|dk|dm|do|dz|ec|edu|ee|eg|eh|er|es|et|eu|fi|fj|fk|fm|fo|fr|ga|gb|gd|ge|gf|gh|gi|gl|gm|gn|gov|gp|gq|gr|gs|gt|gu|gw|gy|hk|hm|hn|hr|ht|hu|id|ie|il|in|info|int|io|iq|ir|is|it|jm|jo|jp|ke|kg|kh|ki|km|kn|kp|kr|kw|ky|kz|la|lb|lc|li|lk|lr|ls|lt|lu|lv|ly|ma|mc|md|me|mg|mh|mil|mk|ml|mm|mn|mo|mp|mq|mr|ms|mt|mu|museum|mv|mw|mx|my|mz|na|name|nc|ne|net|nf|ng|ni|nl|no|np|nr|nt|nu|nz|om|org|pa|pe|pf|pg|ph|pk|pl|pm|pn|pr|pro|ps|pt|pw|py|qa|re|ro|ru|rw|sa|sb|sc|sd|se|sg|sh|si|sj|sk|sl|sm|sn|so|sr|st|su|sv|sy|sz|tc|td|tf|tg|th|tj|tk|tm|tn|to|tp|tr|tt|tv|tw|tz|ua|ug|uk|um|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|yu|za|zm|zw)$|(([0-9][0-9]?|[0-1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5])\.){3}([0-9][0-9]?|[0-1][0-9][0-9]|[2][0-4][0-9]|[2][5][0-5]))$/i",$email));
-}
-
-if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
-
-$first_name     = $_POST['first_name'];
-$last_name     = $_POST['last_name'];
-$email    = $_POST['email'];
-$phone   = $_POST['phone'];
-$select_price   = $_POST['select_price'];
-$select_service   = $_POST['select_service'];
-$subject  = $_POST['subject'];
-$comments = $_POST['comments'];
-$verify   = $_POST['verify'];
-
-if(trim($first_name) == '') {
-	echo '<div class="error_message">Attention! You must enter your name.</div>';
-	exit();
-}  else if(trim($email) == '') {
-	echo '<div class="error_message">Attention! Please enter a valid email address.</div>';
-	exit();
-} else if(!isEmail($email)) {
-	echo '<div class="error_message">Attention! You have enter an invalid e-mail address, try again.</div>';
-	exit();
-}
-
-if(trim($comments) == '') {
-	echo '<div class="error_message">Attention! Please enter your message.</div>';
-	exit();
-}
-
-if(get_magic_quotes_gpc()) {
-	$comments = stripslashes($comments);
-}
-
-
-// Configuration option.
-// Enter the email address that you want to emails to be sent to.
-// Example $address = "joe.doe@yourdomain.com";
-
-//$address = "example@themeforest.net";
-$address = "example@yourdomain.com";
-
-
-// Configuration option.
-// i.e. The standard subject will appear as, "You've been contacted by John Doe."
-
-// Example, $e_subject = '$name . ' has contacted you via Your Website.';
-
-$e_subject = 'You\'ve been contacted by ' . $first_name . '.';
-
-
-// Configuration option.
-// You can change this if you feel that you need to.
-// Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
-
-$e_body = "You have been contacted by $first_name. $first_name selected service of $select_service, their additional message is as follows. Customer max budge is $select_price, for this project." . PHP_EOL . PHP_EOL;
-$e_content = "\"$comments\"" . PHP_EOL . PHP_EOL;
-$e_reply = "You can contact $first_name via email, $email or via phone $phone";
-
-$msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
-
-$headers = "From: $email" . PHP_EOL;
-$headers .= "Reply-To: $email" . PHP_EOL;
-$headers .= "MIME-Version: 1.0" . PHP_EOL;
-$headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
-$headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
-
-if(mail($address, $e_subject, $msg, $headers)) {
-
-	// Email has sent successfully, echo a success page.
-
-	echo "<fieldset>";
-	echo "<div id='success_page'>";
-	echo "<h1>Email Sent Successfully.</h1>";
-	echo "<p>Thank you <strong>$first_name</strong>, your message has been submitted to us.</p>";
-	echo "</div>";
-	echo "</fieldset>";
-
-} else {
-
-	echo 'ERROR!';
-
-}
+  
 
 
+            
 
+
+  
+ 
+
+
+            <div id="getintouch" class="section wb wow fadeIn" style="padding-bottom:0;">
+                <div class="container">
+                   <div class="heading">
+                      <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
+                      <h2>Get in Touch</h2>
+                   </div>
+                </div>
+                <div class="contact-section">
+                   <div class="form-contant">
+                      <form id="ajax-contact" action="assets/mailer.php" method="post">
+                         <div class="row">
+                            <div class="col-md-6">
+                               <div class="form-group in_name">
+                                  <input type="text" class="form-control" placeholder="Name" required="required">
+                               </div>
+                            </div>
+                            <div class="col-md-6">
+                               <div class="form-group in_email">
+                                  <input type="email" class="form-control" placeholder="E-mail" required="required">
+                               </div>
+                            </div>
+                            <div class="col-md-6">
+                               <div class="form-group in_email">
+                                  <input type="tel" class="form-control" id="phone" placeholder="Phone" required="required">
+                               </div>
+                            </div>
+                            <div class="col-md-6">
+                               <div class="form-group in_email">
+                                  <input type="text" class="form-control" id="subject" placeholder="Subject" required="required">
+                               </div>
+                            </div>
+                            <div class="col-md-12">
+                               <div class="form-group in_message"> 
+                                  <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required"></textarea>
+                               </div>
+                               <div class="actions">
+                                  <input type="submit" value="Send Message" name="submit" id="submitButton" class="btn small" title="Submit Your Message!">
+                               </div>
+                            </div>
+                         </div>
+                      </form>
+                   </div>
+                   <div id="googleMap" style="width:100%;height:450px;"></div>
+                </div>
+             </div>
+       
+
+
+
+
+
+
+
+
+
+  <footer id="footer" class="footer-area wow fadeIn">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-4">
+             <div class="logo padding">
+                <a href=""><img src="images/logo.png" alt=""></a>
+                <p>Locavore pork belly scen ester pine est chill wave microdosing pop uple itarian cliche artisan.</p>
+             </div>
+          </div>
+          <div class="col-md-4">
+             <div class="footer-info padding">
+                <h3>CONTACT US</h3>
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> PO Box 16122 Collins Street West Victoria 8007 Australia</p>
+                <p><i class="fa fa-paper-plane" aria-hidden="true"></i> info@gmail.com</p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i> (+1) 800 123 456</p>
+             </div>
+          </div>
+          <div class="col-md-4">
+             <div class="subcriber-info">
+                <h3>SUBSCRIBE</h3>
+                <p>Get healthy news, tip and solutions to your problems from our experts.</p>
+                <div class="subcriber-box">
+                   <form id="mc-form" class="mc-form">
+                      <div class="newsletter-form">
+                         <input type="email" autocomplete="off" id="mc-email" placeholder="Email address" class="form-control" name="EMAIL">
+                         <button class="mc-submit" type="submit"><i class="fa fa-paper-plane"></i></button> 
+                         <div class="clearfix"></div>
+                         <!-- mailchimp-alerts Start -->
+                         <div class="mailchimp-alerts">
+                            <div class="mailchimp-submitting"></div>
+                            <!-- mailchimp-submitting end -->
+                            <div class="mailchimp-success"></div>
+                            <!-- mailchimp-success end -->
+                            <div class="mailchimp-error"></div>
+                            <!-- mailchimp-error end -->
+                         </div>
+                         <!-- mailchimp-alerts end -->
+                      </div>
+                   </form>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </footer>
+ <div class="copyright-area wow fadeIn">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-8">
+             <div class="footer-text">
+                <p>© 2023 Lifecare. All Rights Reserved.</p>
+             </div>
+          </div>
+          <div class="col-md-4">
+             <div class="social">
+                <ul class="social-links">
+                   <li><a href=""><i class="fa fa-rss"></i></a></li>
+                   <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                   <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                   <li><a href="support.google.com/answer/2451065?hl=en"><i class="fa fa-google-plus"></i></a></li>
+                   <li><a href="https://www.youtube.com/watch?v=vSHkMAMRRV4"><i class="fa fa-youtube"></i></a></li>
+                   <li><a href=""><i class="fa fa-pinterest"></i></a></li>
+                </ul>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- end copyrights -->
+      <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+      <!-- all js files -->
+      <script src="js/all.js"></script>
+      <!-- all plugins -->
+      <script src="js/custom.js"></script>
+      <!-- map -->
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap">
+      
+     </script>
+   
+    </body>
+</html>

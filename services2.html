@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medical Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Body styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #E1F8DC;
+    }
+
+    /* Header styles */
+    h1 {
+      color: #333;
+      text-align: center;
+      padding-bottom: 20px;
+      border: 1px solid #ACDDDE;
+      background-color: #ACDDDE;
+    }
+
+    /* Service container styles */
+    .service-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Service card styles */
+    .service-card {
+      width: 250px;
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Service card content styles */
+    .service-icon {
+      font-size: 40px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .service-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .service-description {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Medical Services</h1>
+
+  <div class="service-container">
+    <div class="service-card" onclick="displayServiceDetails('General Check-ups')">
+      <i class="fas fa-user-md service-icon"></i>
+      <h2 class="service-title">General Check-ups</h2>
+      <p class="service-description">Comprehensive health assessments and screenings.</p>
+    </div>
+
+    <div class="service-card" onclick="displayServiceDetails('Specialist Consultations')">
+      <i class="fas fa-stethoscope service-icon"></i>
+      <h2 class="service-title">Specialist Consultations</h2>
+      <p class="service-description">Expert consultations with specialized doctors.</p>
+    </div>
+
+    <div class="service-card" onclick="displayServiceDetails('Diagnostic Tests')">
+      <i class="fas fa-notes-medical service-icon"></i>
+      <h2 class="service-title">Diagnostic Tests</h2>
+      <p class="service-description">Advanced medical tests for accurate diagnosis.</p>
+    </div>
+
+    <div class="service-card" onclick="displayServiceDetails('Surgical Procedures')">
+      <i class="fas fa-procedures service-icon"></i>
+      <h2 class="service-title">Surgical Procedures</h2>
+      <p class="service-description">State-of-the-art surgeries performed by skilled surgeons.</p>
+    </div>
+
+    <div class="service-card" onclick="displayServiceDetails('Emergency Care')">
+      <i class="fas fa-ambulance service-icon"></i>
+      <h2 class="service-title">Emergency Care</h2>
+      <p class="service-description">Immediate medical assistance for emergencies.</p>
+    </div>
+    
+     <div class="service-card" onclick="displayServiceDetails('Rehabilitation Services')">
+  <i class="fas fa-heartbeat service-icon"></i>
+  <h2 class="service-title">Rehabilitation Services</h2>
+  <p class="service-description">Specialized therapies and programs for recovery and rehabilitation.</p>
+</div>
+
+  </div>
+  </body>
+</html>

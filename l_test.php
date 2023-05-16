@@ -109,12 +109,12 @@ a{
         <h3>Please choose your further action!</h3>
         <button class="button" ><a class = "admin" href="adminDashboard.php">Go to Admin page</a></button>
     <?php else:  ?>
-        <?php  header('Location: l_test.php'); ?>
+        <?php  header('Location: index.php'); ?>
         <!-- Show links for normal user -->
        
         
         
-        <p><a href="index.php">Profile</a></p>
+        <p><a href="index.html">Profile</a></p>
         <?php endif; ?>
        
         <button class="button2" ><a class="logout" href="logout.php">Log out </a></button>

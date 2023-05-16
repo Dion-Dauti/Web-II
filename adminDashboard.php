@@ -39,7 +39,7 @@
    <!-- [if lt IE 9] -->
     </head>
 		
-  
+  <?php session_start();?>
     
         <body class="clinic_version">
             <!-- LOADER -->
@@ -97,6 +97,8 @@
       </div>
    </div>
 </div>
+
+
 
             
             

@@ -2,6 +2,7 @@
 
 $is_invalid = false;
 
+
 # detect if the form has been submitted
 
 if($_SERVER["REQUEST_METHOD"] === "POST"  ){
@@ -151,7 +152,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"  ){
             <br>
             <button id="login"><b>Log in<b></button>
             <br>
-            <h4><b>If you don't have an account, then you can </b><a class="signup" href="signup.php"><b>Sign up</b></a></h4>
+            <h4><b>If you don't have an account yet, you can </b><a class="signup" href="signup.php"><b>Sign up</b></a></h4>
 
         </form>
     </body>
