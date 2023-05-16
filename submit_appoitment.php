@@ -1,18 +1,37 @@
-<!-- submit_appointment.php -->
-
 <?php
-// Assuming you have a database connection established
-include('connection.php');
-
-// Check if the form is submitted
+include 'connection.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve form data
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $day = $_POST['day'];
-    $time = $_POST['time'];
-    $doctorName = $_POST['doctorName'];
-    $message = $_POST['message'];
+    if (isset($_POST['name2'])) {
+        $name = $_POST['name2'];
+    } else {
+        echo "Name is required.";
+        exit();
+    }
+
+    if (isset($_POST['email2'])) {
+        $email = $_POST['email2'];
+    } else {
+        echo "Email is required.";
+        exit();
+    }
+
+    // $day = $_POST['day'];
+    // $time = $_POST['time'];
+
+    if (isset($_POST['doctorName2'])) {
+        $doctorName = $_POST['doctorName2'];
+    } else {
+        echo "Doctor name is required.";
+        exit();
+    }
+
+    if (isset($_POST['message2'])) {
+        $message = $_POST['message2'];
+    } else {
+        echo "Message is required.";
+        exit();
+    }
 
     // Perform any necessary data validation here
 
@@ -33,14 +52,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Doctor exists, retrieve the ID and specialization
             $doctorRow = mysqli_fetch_assoc($doctorResult);
             $doctorId = $doctorRow['id'];
-            $doctorSpecialization = $doctorRow['doctorSpecialization'];
+            $doctorSpecialization = $doctorRow['specilization'];
 
             // Insert the form data into the database along with the user ID, doctor ID, and doctor specialization
-            $insertQuery = "INSERT INTO appointment (doctorSpecialization , userId , doctorId,  Message) VALUES ( '$doctorSpecialization','$userId', '$doctorId',  '$message')";
+            $insertQuery = "INSERT INTO appointment ( userId, doctorId, Message) VALUES ('$userId', '$doctorId', '$message')";
 
             if (mysqli_query($conn, $insertQuery)) {
                 // Success message
-                echo "Appointment submitted successfully!";
+                header("Location: service.php");
             } else {
                 // Error message
                 echo "Error: " . mysqli_error($conn);

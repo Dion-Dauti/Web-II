@@ -210,7 +210,7 @@ ALTER TABLE `users`
 -- Constraints for table `appointment`
 --
 ALTER TABLE `appointment`
-  ADD CONSTRAINT `appointment_ibfk_1` FOREIGN KEY (`doctorSpecialization`) REFERENCES `doctors` (`specilization`) ON DELETE CASCADE ON UPDATE CASCADE,
+  
   ADD CONSTRAINT `appointment_ibfk_2` FOREIGN KEY (`doctorId`) REFERENCES `doctors` (`id`) ON DELETE SET NULL ON UPDATE SET NULL,
   ADD CONSTRAINT `appointment_ibfk_3` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 

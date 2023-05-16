@@ -2,9 +2,9 @@
 include('connection.php');
 
 
-$adminId = $_POST['adminId'];
+$adminId = $_POST['adminId'] ;
 
-$query = "DELETE FROM users WHERE id = $adminId";
+$query = "DELETE FROM users WHERE id = $adminId ";
 
 if (mysqli_query($conn, $query)) {
    

@@ -160,7 +160,7 @@
 </thead>
 <tbody>
 <?php
-                        // Fetch all patients from the database
+                        // Fetch all doctors from the database
                         $query = mysqli_query($conn, "SELECT * FROM doctors");
                         while ($row = mysqli_fetch_assoc($query)) {
                            $doctorId = $row['id'];
@@ -196,7 +196,7 @@
                         <input type="email" class="form-control" id="doctorEmail" name="doctorEmail"style="margin-bottom: 10px;" required>
                      </div>
                      
-                     <button type="submit" class="btn btn-primary">Add Patient</button>
+                     <button type="submit" class="btn btn-primary">Add Doctor</button>
                   </form>
                </div>
             </div>
