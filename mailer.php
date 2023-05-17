@@ -8,6 +8,14 @@ include 'connection.php';
     $phone = $_POST['tel'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
+    if(trim($name) == '') {
+        echo '<div class="error_message">Attention! You must enter your name.</div>';
+        exit();
+    }  else if(trim($email) == '') {
+        echo '<div class="error_message">Attention! Please enter a valid email address.</div>';
+        exit();
+    } 
+    
     
     // Prepare the SQL statement
     $stmt = $conn->prepare("INSERT INTO faq (username, useremail, phone, subject, message) VALUES (?, ?, ?, ?, ?)");
@@ -16,6 +24,8 @@ include 'connection.php';
     // Execute the statement
     if ($stmt->execute()) {
         // Insertion successful
+        
+	 
         header("Location: contact.html");
     } else {
         // Error occurred

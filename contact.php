@@ -74,7 +74,7 @@
                               <li><a  href="doctors.php">Doctors</a></li>
                               <li><a  href="price.php">Price</a></li>
                               <li><a  href="testimonials.php">Testimonials</a></li>
-                              <li><a data-scroll href="contact.php">Contact</a></li>
+                              <li><a data-scroll href="contact.html">Contact</a></li>
                            </ul>
                         </div>
                      </nav>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="contact-section">
                    <div class="form-contant">
-                      <form id="ajax-contact" action="assets/mailer.php" method="post">
+                      <form id="ajax-contact" action="mailer.php" method="post">
                          <div class="row">
                             <div class="col-md-6">
                                <div class="form-group in_name">

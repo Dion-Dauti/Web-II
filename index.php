@@ -113,7 +113,7 @@
                         <li><a   href="doctors.php">Doctors</a></li>
                         <li><a data-scroll href="price.php">Price</a></li>
                   <li><a data-scroll href="testimonials.php">Testimonials</a></li>
-                        <li><a data-scroll href="contact.php">Contact</a>      </li>
+                        <li><a data-scroll href="contact.html">Contact</a>      </li>
                         <div class="userinfo">
                      <?php include("showtheinfo.php"); ?>
                        </div>
