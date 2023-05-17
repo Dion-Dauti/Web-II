@@ -119,7 +119,7 @@ a{
        
         <button class="button2" ><a class="logout" href="logout.php">Log out </a></button>
     <?php else: ?>
-      <button class="button"> <a href="login.php">Login</a></button>  <button class="button2"><a href="signup_process.php">Sign Up</a></button>
+      <button class="button"> <a href="login.php">Login</a></button>  <button class="button2"><a href="signup.php">Sign Up</a></button>
 
     <?php endif; ?>
     
