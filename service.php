@@ -75,13 +75,22 @@
                         <div id="navbar" class="navbar-collapse collapse">
                            <ul class="nav navbar-nav">
                               <li><a class="active" href="index.html">Home</a></li>
+<<<<<<< HEAD
+                              <li><a  href="about.php">About us</a></li>
+                              <li><a  href="service.php">Services</a></li>
+                              <li><a  href="doctors.php">Doctors</a></li>
+                              <li><a  href="price.php">Price</a></li>
+                              <li><a  href="testimonials.php">Testimonials</a></li>
+                              <li><a data-scroll href="contact.php">Contact</a></li>
+=======
                               <li><a  href="about.html">About us</a></li>
-                              <li><a  href="service.html">Services</a></li>
+                              <li><a  href="service.php">Services</a></li>
                              
                               <li><a  href="doctors.html">Doctors</a></li>
                               <li><a  href="price.html">Price</a></li>
                               <li><a  href="testimonials.html">Testimonials</a></li>
                               <li><a data-scroll href="contact.html">Contact</a></li>
+>>>>>>> 401d767fe5c8afcd57b2a8574559a700003510ca
                            </ul>
                         </div>
                      </nav>
@@ -103,7 +112,7 @@
 
 
            <li class="dropdownn">
-               <a href="service.html" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+               <a href="service.php" class="dropdown-toggle" data-toggle="dropdown">Services</a>
                <div class="dropdownn-menu">
                   <ul>
                      <li><a href="#">Service 1</a></li>
@@ -175,82 +184,82 @@
                          <div class="appointment-form">
                             <h3><span>+</span> Book Appointment</h3>
                             <div class="form">
-                               <form action="submit_appoitment.php" method="post" >
-                                  <fieldset>
-                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                           <div class="form-group">
-                                              <input type="text" id="name" placeholder="Your Name"  />
-                                           </div>
-                                        </div>
-                                     </div>
-                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                           <div class="form-group">
-                                              <input type="email" placeholder="Email Address" id="email" />
-                                           </div>
-                                        </div>
-                                     </div>
-                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
-                                        <div class="row">
-                                           <div class="form-group">
-                                              <select class="form-control">
-                                                 <option>Day</option>
-                                                 <option>Sunday</option>
-                                                 <option>Monday</option>
-                                              </select>
-                                           </div>
-                                           <div class="form-group">
-                                              <select class="form-control">
-                                                 <option>Time</option>
-                                                 <option>AM</option>
-                                                 <option>PM</option>
-                                              </select>
-                                           </div>
-                                        </div>
-                                     </div>
-                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                           <div class="form-group">
-                                              <select class="form-control">
-                                                 <option>Doctor Name</option>
-                                                
-                                    <?php
-                                    // Assuming you have a database connection established
-                                    include('connection.php');
-                                    // Fetch doctors' names from the database
-                                    $query = "SELECT doctorName FROM doctors";
-                                    $result = mysqli_query($conn, $query);
+                            <form action="submit_appoitment.php" method="post">
+  <fieldset>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="form-group">
+          <input type="text" name="name2" id="name" placeholder="Your Name" required />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="form-group">
+          <input type="email" name="email2" placeholder="Email Address" id="email" required />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
+      <div class="row">
+        <div class="form-group">
+          <select class="form-control" name="day" required>
+            <option value="">Select Day</option>
+            <option value="Sunday">Sunday</option>
+            <option value="Monday">Monday</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="form-control" name="time" required>
+            <option value="">Select Time</option>
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="form-group">
+          <select class="form-control" id="doctorName" name="doctorName2" required>
+            <option value="">Select Doctor</option>
+            <?php
+            // Assuming you have a database connection established
+            include('connection.php');
+            // Fetch doctors' names from the database
+            $query = "SELECT doctorName FROM doctors";
+            $result = mysqli_query($conn, $query);
 
-                                    // Generate HTML code with the doctors' names
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        $doctorName = $row['doctorName'];
-                                        echo "<option>$doctorName</option>";
-                                    }
+            // Generate HTML code with the doctors' names
+            while ($row = mysqli_fetch_assoc($result)) {
+              $doctorName = $row['doctorName'];
+              echo "<option value=\"$doctorName\">$doctorName</option>";
+            }
 
-                                    // Close the database connection
-                                    mysqli_close($conn);
-                                    ?>
-                                              </select>
-                                           </div>
-                                        </div>
-                                     </div>
-                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                           <div class="form-group">
-                                              <textarea rows="4" id="textarea_message" class="form-control" placeholder="Your Message..."></textarea>
-                                           </div>
-                                        </div>
-                                     </div>
-                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                           <div class="form-group">
-                                              <div class="center"><button type="submit">Submit</button></div>
-                                           </div>
-                                        </div>
-                                     </div>
-                                  </fieldset>
-                               </form>
+            // Close the database connection
+            mysqli_close($conn);
+            ?>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="form-group">
+          <textarea rows="4" name="message2" id="message" class="form-control" placeholder="Your Message..." required></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="row">
+        <div class="form-group">
+          <div class="center"><button type="submit">Submit</button></div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
                             </div>
                          </div>
                       </div>
@@ -329,8 +338,8 @@
                    <li><a href=""><i class="fa fa-rss"></i></a></li>
                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                   <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-                   <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                   <li><a href="https://support.google.com/answer/2451065?hl=en"><i class="fa fa-google-plus"></i></a></li>
+                   <li><a href="https://www.youtube.com/watch?v=vSHkMAMRRV4"><i class="fa fa-youtube"></i></a></li>
                    <li><a href=""><i class="fa fa-pinterest"></i></a></li>
                 </ul>
              </div>

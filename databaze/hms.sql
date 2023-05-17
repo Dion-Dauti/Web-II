@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: May 15, 2023 at 07:30 PM
+-- Generation Time: May 16, 2023 at 02:27 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -41,9 +41,9 @@ CREATE TABLE `appointment` (
 --
 
 INSERT INTO `appointment` (`id`, `doctorSpecialization`, `doctorId`, `userId`, `consultancyFees`, `Message`) VALUES
-(1, 'Internal Diseases', 2, 1, 50, NULL),
-(2, 'Surgery', 1, 36, 200, NULL),
-(3, 'Internal Diseases', 2, 6, 20, NULL);
+(1, NULL, 3, 3, NULL, 'dfsagd'),
+(2, NULL, 1, 36, NULL, 'DionDAUIT BOSSI I BONI FIX BUGS'),
+(3, NULL, 2, 36, NULL, 'Filani po ka dhimbjem koke');
 
 -- --------------------------------------------------------
 
@@ -86,6 +86,21 @@ INSERT INTO `doctorspecilization` (`id`, `specilization`) VALUES
 (2, 'Internal Diseases'),
 (3, 'Orthopedics'),
 (1, 'Surgery');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faq`
+--
+
+CREATE TABLE `faq` (
+  `id` int(255) NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `useremail` varchar(255) DEFAULT NULL,
+  `phone` int(20) DEFAULT NULL,
+  `subject` varchar(255) DEFAULT NULL,
+  `message` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -133,11 +148,7 @@ INSERT INTO `users` (`id`, `Name`, `Last_name`, `Email`, `Password_hash`, `role`
 (1, 'test', NULL, 'test@gmail.com', '$2y$10$N46T1gra53xUG.HUUt0eaOA9p9D1xYTpIeepso3tGM9wd0eehBhsW', 'user'),
 (3, 'test2', NULL, 'test2@gmail.com', '$2y$10$t747xDgiJ2l/KN8wYe0MjO/OAVIHnVqXPlYkjQbPzzrYER4oHXdQS', 'user'),
 (6, 'test', NULL, 'test3@gmail.com', '$2y$10$JIbk2MDGbRs3Q/VCKU687O6FpdPdqN/A81tOpTrdN6Mrqm2FXoqgi', 'user'),
-(10, 'test', NULL, 'test4@gmail.com', '$2y$10$xnbso8NBks37dVzk9Rc24eCM3sXYgswagChmiROCvUcljCgM3qnRO', 'user'),
-(11, NULL, NULL, '', NULL, 'user'),
 (36, 'filani', NULL, 'filani@gmail.com', '$2y$10$Z4NLZyVu.eRgJ6dzSj00IexK/D7kFbTh3iEwONT2ianXSHX6oAZJ6', 'user'),
-(41, 'test123', NULL, 'test123@gmail.com', '$2y$10$KWbHtO.uNAxbBQDrrkSe5OBGiApLfD4kre8wVecw/FyHwZlju5hZK', 'user'),
-(43, 'user1', NULL, 'user@gmail.com', '$2y$10$bX9VYdSmWo1W.BwJkD5BlO2xdF68hyuLXf21Qnd0CsqaHFgt6K9Vy', 'user'),
 (45, 'test8', NULL, 'test8@gmail.com', '$2y$10$vAbs1/yDKYuru9zpj5WYm.OOdEBOCseZfPkmfaL1q9.ZFGJfYm8Qm', 'user'),
 (49, 'hihii', 'hihii', 'hihii1@gmail.com', '$2y$10$DYvizpClNItWHx3mK7wl9uGRIuoXa113bY13h76sD6v/VEyOkoJRe', 'user'),
 (50, 'ksv', 'ksv', 'ksv@gmail', '$2y$10$REdGUHoPQsX1UYu9XTE3MO0CE5MQ/xCjI/uFm9o6lW.b5SRHQ5kgy', 'user'),
@@ -147,13 +158,12 @@ INSERT INTO `users` (`id`, `Name`, `Last_name`, `Email`, `Password_hash`, `role`
 (54, 'test', 'testd', 'testd@gmail.com', '$2y$10$f.CVefwIRyuvKIJn0zCfiuyF1Ug663D8TVkhHJvXg9ZL1UTQPtaPG', 'user'),
 (56, 'test', 'test', 'testf@gmail.com', '$2y$10$tUriFMcIAcjchuI3QNiT9.TfK9soXbmiT9X8llG1F9.dHks6okwRy', 'user'),
 (57, 'test', 'test', 'testt@gmail.com', '$2y$10$yFKTbgSSbe6BPVEFA/0eTOSiSuaIpwLV/wMIdsXq6LK2ud0PX0D/.', 'user'),
-(58, 'test', 'test', 'test2d', '$2y$10$Xqx.qPF.za.oriPT/UOnxOQWCbtDFg3zCO0AeB56yf.91/Uw9mSEK', 'user'),
-(59, 'test', 'test', 'test', '$2y$10$ykY8ZfHOLlME0Ps6HDUNr.mTgc7rC2PzYFK5RA1nXYi4Nmm72ioT6', 'user'),
-(60, 'test', 'test', 'test2', '$2y$10$TdHRD5Qi4NYN4YJlDzjf4OdW1fElU37m9twmGNZkRvbXxsnm1THnG', 'user'),
-(63, 'test', 'test', 'knk1@gmail.com', '$2y$10$hYhL1zu9DmYZ7/sAwwCoCur4XhhQn2Rv4Ahnitfzpc4CzeFb2iIt2', 'user'),
-(127, 'Blerta', NULL, 'blerta@gmail.com', '$2y$10$sqnahbYj3o77pYZE4H6xGOvMQaS.f6FQfBmvjtSGKTeWtQ4gKb/ae', 'admin'),
-(128, 'aaaa', 'kdsngj', 'google@gmail.com', '$2y$10$HACbeVf9u./u3aN62I6YsOpxfwAbBC2yonxh2Ta/q6pO./sFH8kkq', 'user'),
-(131, 'Seriuos', NULL, 'rety@gmail.com', '$2y$10$vZKoikpOMe4PSQjzBiBXj.jN3Z23k/.ELjSNEQkKY.GqLtnxBVUPy', 'user');
+(132, 'Dion', NULL, 'fknskjf@gmail.com', '$2y$10$DmEbDILPeNkP6nUQcWclAeqn8RlGmhSrC0REYzJyaeW/2sDHY6MH2', 'user'),
+(135, 'jndsfkajf', NULL, 'dion@gmail.com', '$2y$10$ditSR6y.BLM0Q/NkbtdyWu167iSmpqPpdAHq5OvtKjbXUeuGJYUx2', 'user'),
+(136, 'dasg', NULL, 'outer@gmail.com', '$2y$10$fF/yra2UWucti3spqajQHuENyU8U6yvfzuFgymrwurGMyJ4QwagEC', 'user'),
+(137, 'Artur', NULL, 'artur@gmail.com', '$2y$10$LkzwCyYnrpVAH9vUBBGGNeSj7gyJftkvyJBzbfSWKmsePy/BUwDzi', 'admin'),
+(138, 'Dion', NULL, 'diondauti@gmail.com', '$2y$10$EFDVhAlRADVzeRM4poppyOrqw4bPnkTF4o3VEKQVU.w8Tv2EhsEOq', 'admin'),
+(139, 'Dion', 'Dauti', 'diondauti123@gmail.com', '$2y$10$ZCJFJ1CISmmrI8wii9UeC.RzaizkLQ/0NU6jZcgIZv/6ZpolRgJYy', 'user');
 
 --
 -- Indexes for dumped tables
@@ -163,13 +173,17 @@ INSERT INTO `users` (`id`, `Name`, `Last_name`, `Email`, `Password_hash`, `role`
 -- Indexes for table `appointment`
 --
 ALTER TABLE `appointment`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `c1` (`doctorId`),
+  ADD KEY `c2` (`userId`),
+  ADD KEY `c4` (`doctorSpecialization`);
 
 --
 -- Indexes for table `doctors`
 --
 ALTER TABLE `doctors`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `c3` (`specilization`);
 
 --
 -- Indexes for table `doctorspecilization`
@@ -179,11 +193,18 @@ ALTER TABLE `doctorspecilization`
   ADD UNIQUE KEY `specilization` (`specilization`);
 
 --
+-- Indexes for table `faq`
+--
+ALTER TABLE `faq`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `c6` (`useremail`);
+
+--
 -- Indexes for table `tblmedicalhistory`
 --
 ALTER TABLE `tblmedicalhistory`
   ADD PRIMARY KEY (`ID`),
-  ADD KEY `PatientId` (`PatientId`);
+  ADD KEY `c5` (`PatientId`);
 
 --
 -- Indexes for table `users`
@@ -197,10 +218,40 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `appointment`
+--
+ALTER TABLE `appointment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `doctors`
+--
+ALTER TABLE `doctors`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `doctorspecilization`
+--
+ALTER TABLE `doctorspecilization`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `faq`
+--
+ALTER TABLE `faq`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `tblmedicalhistory`
+--
+ALTER TABLE `tblmedicalhistory`
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
 
 --
 -- Constraints for dumped tables
@@ -210,21 +261,27 @@ ALTER TABLE `users`
 -- Constraints for table `appointment`
 --
 ALTER TABLE `appointment`
-  ADD CONSTRAINT `appointment_ibfk_1` FOREIGN KEY (`doctorSpecialization`) REFERENCES `doctors` (`specilization`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `appointment_ibfk_2` FOREIGN KEY (`doctorId`) REFERENCES `doctors` (`id`) ON DELETE SET NULL ON UPDATE SET NULL,
-  ADD CONSTRAINT `appointment_ibfk_3` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `c1` FOREIGN KEY (`doctorId`) REFERENCES `doctors` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `c2` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `c4` FOREIGN KEY (`doctorSpecialization`) REFERENCES `doctorspecilization` (`specilization`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `doctors`
 --
 ALTER TABLE `doctors`
-  ADD CONSTRAINT `constrain_doctor` FOREIGN KEY (`specilization`) REFERENCES `doctorspecilization` (`specilization`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `c3` FOREIGN KEY (`specilization`) REFERENCES `doctorspecilization` (`specilization`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `faq`
+--
+ALTER TABLE `faq`
+  ADD CONSTRAINT `c6` FOREIGN KEY (`useremail`) REFERENCES `users` (`Email`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tblmedicalhistory`
 --
 ALTER TABLE `tblmedicalhistory`
-  ADD CONSTRAINT `adskjnfaj` FOREIGN KEY (`PatientId`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `c5` FOREIGN KEY (`PatientId`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

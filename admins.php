@@ -30,6 +30,31 @@
    <link rel="stylesheet" href="css/custom.css">
    <!-- Modernizer for Portfolio -->
     <!-- Bootstrap CSS -->
+    <style>
+      /* CSS styles for the table */
+      .table-scroll {
+        max-height: 400px; /* Adjust the maximum height as needed */
+         overflow-y: scroll;
+         overflow-x: hidden;
+      }
+      
+
+      .whatdoInamethis {
+         display: flex;
+      }
+
+      .col-md-2 {
+         position: sticky;
+         top: 0;
+         height: 100vh;
+         overflow-y: auto;
+      }
+
+      .col-md-10 {
+         height: calc(100vh - 170px); /* Adjust the value if needed */
+         overflow-y: auto;
+      }
+   </style>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
    <script src="js/modernizer.js"></script>
@@ -118,14 +143,19 @@
    <div class="col-md-12">
       <div class="row">
          <div class="col-md-2" style="margin-left: -35px;">
+         <div class="list-group bg-info" style="height: 100vh;">
+<a href="adminDashboard.php" class="list-group-item list-group-item-action bg-info text-center text-white">Dashboard</a>
+<a href="admins.php" class="list-group-item list-group-item-action bg-info text-center text-white">Administrators</a>
+<a href="admin-doctors.php" class="list-group-item list-group-item-action bg-info text-center text-white">Doctors</a>
+<a href="patients.php" class="list-group-item list-group-item-action bg-info text-center text-white">Patient</a>
+</div>
             <?php
-            include('sidenav.php');
+            
             include('connection.php');
             ?>
          </div>
          <div class="col-md-10">
-            <h2>All Admins</h2>
-            <table class="table">
+            <h2>All Admins</h2><div class="table-scroll" style="max-height: 400px; overflow: auto;"> <table class="table">
                <thead>
                   <tr>
                      <th>ID</th>
@@ -151,7 +181,8 @@
                   }
                   ?>
                </tbody>
-            </table>
+            </table></div>
+            
             
             <h2>Add New Admin</h2>
             <form action="add_admin.php" method="post">
@@ -173,3 +204,4 @@
       </div>
    </div>
 </div>
+               
