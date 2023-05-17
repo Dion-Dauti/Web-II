@@ -89,10 +89,10 @@
                      <ul class="nav navbar-nav">
                         <li><a class="active" href="index.html">Home</a></li>
 
-<<<<<<< HEAD:index.php
+
                         <li><a data-scroll href="about.php">About us</a></li>
                         <li><a data-scroll href="service.php">Services</a></li>
-=======
+
                         <li><a data-scroll href="about.html">About us</a></li>
                         <li class="dropdownn">
                            <a href="service.php" class="dropdown-toggle" data-toggle="dropdown">Services</a>
@@ -100,16 +100,16 @@
                               <ul>
                                  <li><a href="servicess.html">Change data</a></li>
                                  <li><a href="#">Medical Services</a></li>
-<<<<<<< HEAD:index.html
+
                                  <li><a href="#">Mental health services</a></li>
-=======
+
                                  <li><a href="#">Service 3</a></li>
->>>>>>> 3b90d06d6233daa51ee03d727a93c390a4a98274:index.php
+
                               </ul>
                            </div>
                         </li>
                          
->>>>>>> 401d767fe5c8afcd57b2a8574559a700003510ca:index.html
+
                         <li><a   href="doctors.html">Doctors</a></li>
                         <li><a data-scroll href="price.php">Price</a></li>
                   <li><a data-scroll href="testimonials.php">Testimonials</a></li>
@@ -124,35 +124,13 @@
                        
                       <!--e shtojme nje buton dhe mrena butonit linkun per logout.php-->
                      
-<<<<<<< HEAD:index.php
                   
-=======
-                     </ul>
->>>>>>> 401d767fe5c8afcd57b2a8574559a700003510ca:index.html
                   </div>
  
                </nav>
                
 
-<<<<<<< HEAD:index.php
               
-=======
-
-               
-
-               <div class="serch-bar">
-                  <div id="custom-search-input">
-                     <div class="input-group col-md-12">
-                        <input type="text" class="form-control input-lg" placeholder="Search" />
-                        <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                        </span>
-                     </div>
-                  </div>
-               </div>
->>>>>>> 401d767fe5c8afcd57b2a8574559a700003510ca:index.html
             </div>
          </div>
       </header>
