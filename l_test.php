@@ -114,7 +114,7 @@ a{
        
         
         
-        <p><a href="index.html">Profile</a></p>
+        <p><a href="index.php">Profile</a></p>
         <?php endif; ?>
        
         <button class="button2" ><a class="logout" href="logout.php">Log out </a></button>

@@ -1,5 +1,5 @@
 <?php
-include('connection.php')
+include('connection.php');
 
 // Fetch the user information from the database
 $sql = "SELECT Name, Last_name, Email FROM users WHERE id =?"; // Replace '1' with the appropriate user ID
