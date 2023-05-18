@@ -18,7 +18,7 @@
                            <a href="service.php" class="dropdown-toggle" data-toggle="dropdown">Services</a>
                            <div class="dropdownn-menu" style="display: none;">
                               <ul>
-                                 <li><a href="servicess.html">Change data</a></li>
+                                 <li><a href="servicess.php">Change data</a></li>
                                  <li><a href="#">Medical Services</a></li>
 
                                  <li><a href="#">Mental health services</a></li>

@@ -1,3 +1,5 @@
+<?php session_start();
+include 'connection.php'; ?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -118,19 +120,19 @@ form {
          <div id="userInformation"></div>
          
          <h2>Modify User Information</h2>
-         <form>
+         <form action="changeuser_info.php" method="POST">
             <label for="newName">New Name:</label>
-            <input type="text" id="newName" name="newName">
+            <input type="text" id="newName" name="newName" required>
 
             <label for="newEmail">New Email:</label>
-            <input type="email" id="newEmail" name="newEmail">
+            <input type="email" id="newEmail" name="newEmail" required>
 
-            <label for="newUsername">New Username:</label>
-            <input type="text" id="newUsername" name="newUsername">
+            <label for="newPassword=">New Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
 
             <input type="submit" value="Update">
          </form>
-         <button class="go-back-button" onclick="location.href='http://localhost/Projekti%20Web%20II/Web-II/index.php'">Go to Homepage</button>
+         <button class="go-back-button" onclick="location.href='index.php'">Go to Homepage</button>
       </div>
    </body>
 </html>
