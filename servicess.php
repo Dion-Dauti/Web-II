@@ -12,7 +12,7 @@ include 'connection.php'; ?>
                type: "POST",
                dataType: "json",
                success: function(response) {
-                  // Update the user information on the page
+                  // Update the user information on the page provvvv
                   $("#userInformation").html(`
                      <p><strong>Name:</strong> ${response.Name}</p>
                      <p><strong>Last Name:</strong> ${response.Last_name}</p>
