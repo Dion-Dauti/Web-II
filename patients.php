@@ -34,7 +34,7 @@ include 'connection.php';?>
     <style>
       /* CSS styles for the table */
       .table-scroll {
-        max-height: 400px; /* Adjust the maximum height as needed */
+        max-height: 400px; 
          overflow-y: scroll;
          overflow-x: hidden;
       }
@@ -52,7 +52,7 @@ include 'connection.php';?>
       }
 
       .col-md-10 {
-         height: calc(100vh - 170px); /* Adjust the value if needed */
+         height: calc(100vh - 170px); 
          overflow-y: auto;
       }
    </style>

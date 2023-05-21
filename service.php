@@ -93,17 +93,7 @@ include 'connection.php';?>
             </header>
 
 
-           <li class="dropdownn">
-               <a href="service.php" class="dropdown-toggle" data-toggle="dropdown">Services</a>
-               <div class="dropdownn-menu">
-                  <ul>
-                     <li><a href="#">Service 1</a></li>
-                     <li><a href="#">Service 2</a></li>
-                     <li><a href="#">Service 3</a></li>
-                  </ul>
-               </div>
-        
-          </li>>
+          
 
 
   
@@ -206,19 +196,19 @@ include 'connection.php';?>
           <select class="form-control" id="doctorName" name="doctorName2" required>
             <option value="">Select Doctor</option>
             <?php
-            // Assuming you have a database connection established
+         
             include('connection.php');
-            // Fetch doctors' names from the database
+            
             $query = "SELECT doctorName FROM doctors";
             $result = mysqli_query($conn, $query);
 
-            // Generate HTML code with the doctors' names
+            // Html optione sipas doktorave qe jon gjet ne db
             while ($row = mysqli_fetch_assoc($result)) {
               $doctorName = $row['doctorName'];
               echo "<option value=\"$doctorName\">$doctorName</option>";
             }
 
-            // Close the database connection
+           
             mysqli_close($conn);
             ?>
           </select>
@@ -317,12 +307,12 @@ include 'connection.php';?>
           <div class="col-md-4">
              <div class="social">
                 <ul class="social-links">
-                   <li><a href=""><i class="fa fa-rss"></i></a></li>
-                   <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                   <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                   <li><a href="https://life-care-ro.webnode.page/rss/"><i class="fa fa-rss"></i></a></li>
+                   <li><a href="https://www.facebook.com/profile.php?id=100063743524584"><i class="fa fa-facebook"></i></a></li>
+                   <li><a href="https://twitter.com/lifecarenews?lang=en"><i class="fa fa-twitter"></i></a></li>
                    <li><a href="https://support.google.com/answer/2451065?hl=en"><i class="fa fa-google-plus"></i></a></li>
                    <li><a href="https://www.youtube.com/watch?v=vSHkMAMRRV4"><i class="fa fa-youtube"></i></a></li>
-                   <li><a href=""><i class="fa fa-pinterest"></i></a></li>
+                   <li><a href="https://www.pinterest.com/pin/525373112764498074/"><i class="fa fa-pinterest"></i></a></li>
                 </ul>
              </div>
           </div>

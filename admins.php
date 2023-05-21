@@ -158,7 +158,7 @@ include 'connection.php';?>
                <tbody>
              
                   <?php
-                  // Fetch all admins from the database
+                  // Merri Adminat 
                   $query = mysqli_query($conn, "SELECT * FROM users WHERE role='admin'");
                   while ($row = mysqli_fetch_assoc($query)) {
                      $adminId = $row['id'];

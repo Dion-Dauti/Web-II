@@ -34,7 +34,7 @@ include 'connection.php';?>
     <style>
       /* CSS styles for the table */
       .table-scroll {
-        max-height: 400px; /* Adjust the maximum height as needed */
+        max-height: 400px; 
          overflow-y: scroll;
          overflow-x: hidden;
       }
@@ -52,7 +52,7 @@ include 'connection.php';?>
       }
 
       .col-md-10 {
-         height: calc(100vh - 170px); /* Adjust the value if needed */
+         height: calc(100vh - 170px); 
          overflow-y: auto;
       }
    </style>
@@ -66,13 +66,13 @@ include 'connection.php';?>
    <!-- [if lt IE 9] -->
    <script>
       function removeDoctor(doctorId) {
-         // Send an AJAX request to delete the patient
+         // AJAX request 
          $.ajax({
             url: 'remove_doctor.php',
             method: 'POST',
             data: { doctorId: doctorId },
             success: function(response) {
-               // Reload the page after successful deletion
+               // Reload pagin 
                location.reload();
             },
             error: function(xhr, status, error) {
@@ -134,7 +134,7 @@ include 'connection.php';?>
 <div class="list-group bg-info" style="height: 100vh;">
 <a href="adminDashboard.php" class="list-group-item list-group-item-action bg-info text-center text-white">Dashboard</a>
 <a href="admins.php" class="list-group-item list-group-item-action bg-info text-center text-white">Administrators</a>
-<a href="" class="list-group-item list-group-item-action bg-info text-center text-white">Doctors</a>
+<a href="admin-doctors.php" class="list-group-item list-group-item-action bg-info text-center text-white">Doctors</a>
 <a href="patients.php" class="list-group-item list-group-item-action bg-info text-center text-white">Patient</a>
 </div>
 <?php
@@ -156,7 +156,7 @@ include 'connection.php';?>
 </thead>
 <tbody>
 <?php
-                        // Fetch all doctors from the database
+                        // Mi marr doktoret
                         $query = mysqli_query($conn, "SELECT * FROM doctors");
                         while ($row = mysqli_fetch_assoc($query)) {
                            $doctorId = $row['id'];
@@ -202,7 +202,7 @@ include 'connection.php';?>
    <style>
       .table-scroll {
          overflow: auto;
-         max-height: 400px; /* Adjust the maximum height as needed */
+         max-height: 400px; 
       }
    </style>
                     </body>

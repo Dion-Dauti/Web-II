@@ -12,22 +12,16 @@
 </style>
 <?php
 
-// Start the session
 
 
-// Check if the user ID is set in the session
 
-// Start the session
-
-
-// Check if the user ID is set in the session
 if (isset($_SESSION["user_id"])) {
-    // Retrieve the user ID from the session
+  
     $userID = $_SESSION["user_id"];
 
     require __DIR__."/s_db.php";
 
-    // Fetch user information from the database based on the user ID
+ 
     $mysqli= mysqli_connect($dbhost,$dbuser,$dbpass,$dbname,3307);
     if ($mysqli->connect_errno) {
         die("Failed to connect to MySQL: " . $mysqli->connect_error);
@@ -43,7 +37,7 @@ if (isset($_SESSION["user_id"])) {
          echo  " "."Role: " . $user["role"]. " "."   " ;
         echo '<i class="fa fa-circle-user fa-2x" style="color:white;">  </i>';
        echo "  ". $user["name"];
-        // echo "Role: " . $user["role"] . "<br>";
+        // echo "Role: " . $user["role"] . "<br>"; testim
        
         echo '</p';
       

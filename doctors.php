@@ -117,10 +117,10 @@ include 'connection.php';?>
                     <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
 
                     <div class="footer-social">
-                        <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
-                        <a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/" class="btn grd1"><i class="fa fa-facebook"></i></a>
+                        <a href="https://github.com/" class="btn grd1"><i class="fa fa-github"></i></a>
+                        <a href="https://twitter.com/" class="btn grd1"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/" class="btn grd1"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div><!--widget -->
             </div><!-- end col -->
@@ -136,10 +136,10 @@ include 'connection.php';?>
                     <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
 
                     <div class="footer-social">
-                        <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
-                        <a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/" class="btn grd1"><i class="fa fa-facebook"></i></a>
+                        <a href="https://github.com/" class="btn grd1"><i class="fa fa-github"></i></a>
+                        <a href="https://twitter.com/" class="btn grd1"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/" class="btn grd1"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div><!--widget -->
             </div><!-- end col -->
@@ -155,10 +155,10 @@ include 'connection.php';?>
                     <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
 
                     <div class="footer-social">
-                        <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
-                        <a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/" class="btn grd1"><i class="fa fa-facebook"></i></a>
+                        <a href="https://github.com/" class="btn grd1"><i class="fa fa-github"></i></a>
+                        <a href="https://twitter.com/" class="btn grd1"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/" class="btn grd1"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div><!--widget -->
             </div><!-- end col -->
@@ -234,12 +234,12 @@ include 'connection.php';?>
           <div class="col-md-4">
              <div class="social">
                 <ul class="social-links">
-                   <li><a href=""><i class="fa fa-rss"></i></a></li>
-                   <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                   <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                   <li><a href="https://life-care-ro.webnode.page/rss/"><i class="fa fa-rss"></i></a></li>
+                   <li><a href="https://www.facebook.com/profile.php?id=100063743524584"><i class="fa fa-facebook"></i></a></li>
+                   <li><a href="https://twitter.com/lifecarenews?lang=en"><i class="fa fa-twitter"></i></a></li>
                    <li><a href="support.google.com/answer/2451065?hl=en"><i class="fa fa-google-plus"></i></a></li>
                    <li><a href="https://www.youtube.com/watch?v=vSHkMAMRRV4"><i class="fa fa-youtube"></i></a></li>
-                   <li><a href=""><i class="fa fa-pinterest"></i></a></li>
+                   <li><a href="https://www.pinterest.com/pin/525373112764498074/"><i class="fa fa-pinterest"></i></a></li>
                 </ul>
              </div>
           </div>

@@ -107,72 +107,70 @@ include 'connection.php';?>
 
 
   
-  <div id="price" class="section pr wow fadeIn" style="background-image:url('images/price-bg.png');">
-     <div class="container"  style="margin-top:80px">
-        <div class="row">
-           <div class="col-md-12">
-              <div class="tab-content">
-                 <div class="tab-pane active fade in" id="tab1">
-                    <div class="row text-center">
-                       <div class="col-md-4">
-                          <div class="pricing-table">
-                             <div class="pricing-table-header">
-                                <h2>Shared Hosting</h2>
-                                <h3>$85/month</h3>
-                             </div>
-                             <div class="pricing-table-features">
-                                <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                             </div>
-                             <div class="pricing-table-sign-up">
-                                <a href="#contact" data-scroll="" class="btn btn-dark btn-radius btn-brd">Order Now</a>
-                             </div>
-                          </div>
-                       </div>
-                       <div class="col-md-4">
-                          <div class="pricing-table pricing-table-highlighted">
-                             <div class="pricing-table-header grd1">
-                                <h2>WordPress Hosting</h2>
-                                <h3>$59/year</h3>
-                             </div>
-                             <div class="pricing-table-space"></div>
-                             <div class="pricing-table-text">
-                                <p>This is a perfect choice for small businesses and startups.</p>
-                             </div>
-                             <div class="pricing-table-features">
-                                <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
-                                <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
-                                <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
-                                <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
-                                <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                             </div>
-                             <div class="pricing-table-sign-up">
-                                <a href="#contact" data-scroll="" class="btn btn-light btn-radius btn-brd grd1 effect-1">Order Now</a>
-                             </div>
-                          </div>
-                       </div>
-                       <div class="col-md-4">
-                          <div class="pricing-table">
-                             <div class="pricing-table-header">
-                                <h2>Reseller Hosting</h2>
-                                <h3>$85/one-time</h3>
-                             </div>
-                             <div class="pricing-table-features">
-                                <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
-                             </div>
-                             <div class="pricing-table-sign-up">
-                                <a href="#contact" data-scroll="" class="btn btn-dark btn-radius btn-brd">Order Now</a>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
+            <div id="price" class="section pr wow fadeIn" style="background-image:url('images/price-bg.png');">
+   <div class="container" style="margin-top: 80px">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="tab-content">
+               <div class="tab-pane active fade in" id="tab1">
+                  <div class="row text-center">
+                     <div class="col-md-4">
+                        <div class="pricing-table">
+                           <div class="pricing-table-header">
+                              <h2>Monthly Wellness Package</h2>
+                              <h3>$85/month</h3>
+                           </div>
+                           <div class="pricing-table-features">
+                              <p><i class="fa fa-heartbeat"></i> Regular health check-ups</p>
+                              <p><i class="fa fa-book-medical"></i> Access to health education</p>
+                              <p><i class="fa fa-tags"></i> Discounted rates</p>
+                              <p><i class="fa fa-calendar-check"></i> Priority schedulings</p>
+                              <p><i class="fa fa-video"></i> Telemedicine consultations</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="pricing-table pricing-table-highlighted">
+                           <div class="pricing-table-header grd1">
+                              <h2>Yearly Preventive Care Package</h2>
+                              <h3>$99/year</h3>
+                           </div>
+                           <div class="pricing-table-space"></div>
+                           <div class="pricing-table-text">
+                              <p>Ensure your health with comprehensive preventive care</p>
+                           </div>
+                           <div class="pricing-table-features">
+                              <p><i class="fas fa-user-md"></i> Annual health check-up</p>
+                              <p><i class="fas fa-syringe"></i> Vaccination updates</p>
+                              <p><i class="fas fa-carrot"></i> Nutritional counseling</p>
+                              <p><i class="fas fa-dumbbell"></i> Personalized exercise plan</p>
+                              <p><i class="fas fa-medkit"></i> Access to online health tracking tools</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="pricing-table">
+                           <div class="pricing-table-header">
+                              <h2>One-Time Maternity Package</h2>
+                              <h3>$299/one-time</h3>
+                           </div>
+                           <div class="pricing-table-features">
+                              <p><i class="fas fa-user-check"></i> Prenatal consultations</p>
+                              <p><i class="fas fa-baby-carriage"></i> Ultrasound screenings</p>
+                              <p><i class="fas fa-graduation-cap"></i> Antenatal classes</p>
+                              <p><i class="fas fa-hospital-alt"></i> Assistance with discharge</p>
+                              <p><i class="fas fa-heart"></i> Postnatal care and follow-up visits</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
                     <!-- end row -->
                  </div>
                  <!-- end pane -->
@@ -296,12 +294,12 @@ include 'connection.php';?>
           <div class="col-md-4">
              <div class="social">
                 <ul class="social-links">
-                   <li><a href=""><i class="fa fa-rss"></i></a></li>
-                   <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                   <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                   <li><a href="https://life-care-ro.webnode.page/rss/"><i class="fa fa-rss"></i></a></li>
+                   <li><a href="https://www.facebook.com/profile.php?id=100063743524584"><i class="fa fa-facebook"></i></a></li>
+                   <li><a href="https://twitter.com/lifecarenews?lang=en"><i class="fa fa-twitter"></i></a></li>
                    <li><a href="support.google.com/answer/2451065?hl=en"><i class="fa fa-google-plus"></i></a></li>
                    <li><a href="https://www.youtube.com/watch?v=vSHkMAMRRV4"><i class="fa fa-youtube"></i></a></li>
-                   <li><a href=""><i class="fa fa-pinterest"></i></a></li>
+                   <li><a href="https://www.pinterest.com/pin/525373112764498074/"><i class="fa fa-pinterest"></i></a></li>
                 </ul>
              </div>
           </div>

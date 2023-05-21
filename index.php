@@ -243,12 +243,12 @@ include 'connection.php'?>
                <div class="col-md-4">
                   <div class="social">
                      <ul class="social-links">
-                        <li><a href=""><i class="fa fa-rss"></i></a></li>
-                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://life-care-ro.webnode.page/rss/"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100063743524584"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/lifecarenews?lang=en"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="https://about.google/"><i class="fa fa-google-plus"></i></a></li>
                         <li><a href="https://www.youtube.com/watch?v=vSHkMAMRRV4"><i class="fa fa-youtube"></i></a></li>
-                        <li><a href=""><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="https://www.pinterest.com/pin/525373112764498074/"><i class="fa fa-pinterest"></i></a></li>
                      </ul>
                   </div>
                </div>
