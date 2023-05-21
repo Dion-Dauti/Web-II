@@ -7,11 +7,11 @@
 
 //hapi i pare - konektimi me server
 
-$dbhost = '127.0.0.1:3310';
+$dbhost = 'localhost';
 $dbuser="root";
 $dbpass = 'root';
 $dbname = 'hms';
-$mysqli= mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+$mysqli= mysqli_connect($dbhost,$dbuser,$dbpass,$dbname,3307);
 
 if(!$mysqli){
     die("Could not connect: ".mysqli_connect_error());

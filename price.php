@@ -36,20 +36,24 @@ include 'connection.php';?>
 
    <style>
 
+
+
+
 /* ikona per shfaqjen e emrit */
 .userinfo{
    margin-left:500px;
    margin-top: 5px;
    
 }
+
+
+
    </style>
    </head>
     
         <body class="clinic_version">
             <!-- LOADER -->
-            <!-- <div id="preloader">
-               <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
-            </div> -->
+            <!--  -->
             <!-- END LOADER -->
             <header>
                <div class="header-top wow fadeIn">

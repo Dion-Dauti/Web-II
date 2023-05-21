@@ -1,8 +1,7 @@
-
-
 <style>
 .userinfo{
    color:white;
+   
    margin-left:500px;
    margin-top: 5px;
    
@@ -41,9 +40,10 @@ if (isset($_SESSION["user_id"])) {
 
         // Display user information
         echo '<p class="userinfo">';
-        echo '<i class="fa fa-circle-user fa-2x" style="color:white;"></i>';
-        echo  " ". $user["name"]. "<br>";
-        echo "Role: " . $user["role"] . "<br>";
+         echo  " "."Role: " . $user["role"]. " "."   " ;
+        echo '<i class="fa fa-circle-user fa-2x" style="color:white;">  </i>';
+       echo "  ". $user["name"];
+        // echo "Role: " . $user["role"] . "<br>";
        
         echo '</p';
       

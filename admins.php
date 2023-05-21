@@ -86,9 +86,7 @@ include 'connection.php';?>
     
         <body class="clinic_version">
             <!-- LOADER -->
-            <!-- <div id="preloader">
-               <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
-            </div> -->
+            <!--  -->
             <!-- END LOADER -->
             <header>
                <div class="header-top wow fadeIn">

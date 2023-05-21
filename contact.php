@@ -31,13 +31,12 @@ include 'connection.php';?>
    <!-- Modernizer for Portfolio -->
    <script src="js/modernizer.js"></script>
    <!-- [if lt IE 9] -->
+   <script src="https://kit.fontawesome.com/72b475b245.js" crossorigin="anonymous"></script>
    </head>
     
         <body class="clinic_version">
             <!-- LOADER -->
-            <div id="preloader">
-               <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
-            </div>
+            
             <!-- END LOADER -->
             <header>
                <div class="header-top wow fadeIn">

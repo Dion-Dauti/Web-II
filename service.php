@@ -41,9 +41,7 @@ include 'connection.php';?>
     
         <body class="clinic_version">
             <!-- LOADER -->
-            <div id="preloader">
-               <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
-            </div>
+            
             <!-- END LOADER -->
             <header>
                <div class="header-top wow fadeIn">
@@ -348,3 +346,16 @@ include 'connection.php';?>
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
     </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+   $(document).ready(function() {
+      $('.dropdownn').hover(
+         function() {
+            $(this).find('.dropdownn-menu').css('display', 'block');
+         },
+         function() {
+            $(this).find('.dropdownn-menu').css('display', 'none');
+         }
+      );
+   });
+</script>
