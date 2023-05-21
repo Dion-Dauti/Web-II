@@ -30,6 +30,9 @@
    <script src="js/modernizer.js"></script>
    <!-- [if lt IE 9] -->
    </head>
+   <style>
+     
+   </style>
     
         <body class="clinic_version">
             <!-- LOADER -->
@@ -55,6 +58,7 @@
                               <span class="icontop"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
                               <span class="iconcont"><a data-scroll href="#">Daily: 7:00am - 8:00pm</a></span>	
                            </div>
+                       
                         </div>
                      </div>
                   </div>
@@ -180,7 +184,7 @@
           <div class="col-md-4">
              <div class="logo padding">
                 <a href=""><img src="images/logo.png" alt=""></a>
-                <p>Locavore pork belly scen ester pine est chill wave microdosing pop uple itarian cliche artisan.</p>
+                <p>Time and health are two precious assets that we don’t recognize and appreciate until they have been depleted.</p>
              </div>
           </div>
           <div class="col-md-4">

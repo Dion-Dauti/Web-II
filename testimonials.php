@@ -33,9 +33,9 @@
     
         <body class="clinic_version">
             <!-- LOADER -->
-            <div id="preloader">
+            <!-- <div id="preloader">
                <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
-            </div>
+            </div> -->
             <!-- END LOADER -->
             <header>
                <div class="header-top wow fadeIn">
@@ -68,12 +68,19 @@
                         
                         <div id="navbar" class="navbar-collapse collapse">
                            <ul class="nav navbar-nav">
-                              <li><a class="active" href="index.php">Home</a></li>
+                              <li><a class="active" href="index.html">Home</a></li>
                               <li><a  href="about.php">About us</a></li>
                               <li><a  href="service.php">Service</a></li>
                               <li><a  href="doctors.php">Doctors</a></li>
                               <li><a  href="price.php">Price</a></li>
                               <li><a  href="testimonials.php">Testimonials</a></li>
+                              <li><a data-scroll href="contact.php">Contact</a></li>
+                              <li><a  href="about.html">About us</a></li>
+                            <li><a  href="service.html">Services</a></li>
+                        
+                         <li><a  href="doctors.html">Doctors</a></li>
+                              <li><a  href="price.html">Price</a></li>
+                              <li><a  href="testimonials.html">Testimonials</a></li>
                               <li><a data-scroll href="contact.html">Contact</a></li>
                            </ul>
                         </div>
@@ -186,7 +193,7 @@
           <div class="col-md-4">
              <div class="logo padding">
                 <a href=""><img src="images/logo.png" alt=""></a>
-                <p>Locavore pork belly scen ester pine est chill wave microdosing pop uple itarian cliche artisan.</p>
+                <p>Time and health are two precious assets that we don’t recognize and appreciate until they have been depleted.</p>
              </div>
           </div>
           <div class="col-md-4">

@@ -36,12 +36,15 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
    <!-- [if lt IE 9] -->
    </head>
+   <style>
+      
+   </style>
     
         <body class="clinic_version">
             <!-- LOADER -->
-            <div id="preloader">
+            <!-- <div id="preloader">
                <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
-            </div>
+            </div> -->
             <!-- END LOADER -->
             <header>
                <div class="header-top wow fadeIn">
@@ -61,6 +64,7 @@
                               <span class="icontop"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
                               <span class="iconcont"><a data-scroll href="#">Daily: 7:00am - 8:00pm</a></span>	
                            </div>
+                       
                         </div>
                      </div>
                   </div>
@@ -130,7 +134,7 @@
                                <div class="serv">
                                   <span class="icon-service"><img src="images/service-icon1.png" alt="#" /></span>
                                   <h4>PREMIUM FACILITIES</h4>
-                                  <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                                  <p>A sad soul can be just as lethal as a germ.</p>
                                </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">

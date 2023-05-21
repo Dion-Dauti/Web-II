@@ -41,6 +41,7 @@
    margin-top: 5px;
    
 }
+
    </style>
 
   
@@ -73,8 +74,14 @@
                      <div class="info-inner">
                         <span class="icontop"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
                         <span class="iconcont"><a data-scroll href="#">Daily: 7:00am - 8:00pm</a></span> 
+                        
+                       
+                      
                      </div>
+                 
+                   
                   </div>
+           
                </div>
             </div>
          </div>
@@ -111,18 +118,21 @@
                          
 
                         <li><a   href="doctors.php">Doctors</a></li>
+                 
                         <li><a data-scroll href="price.php">Price</a></li>
                   <li><a data-scroll href="testimonials.php">Testimonials</a></li>
                         <li><a data-scroll href="contact.html">Contact</a>      </li>
                         <div class="userinfo">
                      <?php include("showtheinfo.php"); ?>
                        </div>
+                       
+                       
                         
                   
                         
                         
                        
-                      <!--e shtojme nje buton dhe mrena butonit linkun per logout.php-->
+               
                      
                   
                   </div>
@@ -169,7 +179,7 @@
                   <div class="service-time one" style="background:#2895f1;">
                      <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
                      <h3>Emergency Case</h3>
-                     <p>Dignissimos ducimus qui blanditii sentium volta tum deleniti atque cori as quos dolores et quas mole.</p>
+                     <p>Good health and good sense are two of life's greatest blessings.</p>
                   </div>
                </div>
             </div>
@@ -193,7 +203,7 @@
                   <div class="service-time three" style="background:#0060b1;">
                      <span class="info-icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></span>
                      <h3>Clinic Timetable</h3>
-                     <p>Dignissimos ducimus qui blanditii sentium volta tum deleniti atque cori as quos dolores et quas mole.</p>
+                     <p>I believe that the greatest gift you can give your family and the world is a healthy you.</p>
                   </div>
                </div>
             </div>
@@ -219,7 +229,7 @@
                <div class="col-md-4">
                   <div class="logo padding">
                      <a href=""><img src="images/logo.png" alt=""></a>
-                     <p>Locavore pork belly scen ester pine est chill wave microdosing pop uple itarian cliche artisan.</p>
+                     <p>Time and health are two precious assets that we don’t recognize and appreciate until they have been depleted.</p>
                   </div>
                </div>
                <div class="col-md-4">
@@ -272,7 +282,7 @@
                         <li><a href=""><i class="fa fa-rss"></i></a></li>
                         <li><a href=""><i class="fa fa-facebook"></i></a></li>
                         <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="support.google.com/answer/2451065?hl=en"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="https://about.google/"><i class="fa fa-google-plus"></i></a></li>
                         <li><a href="https://www.youtube.com/watch?v=vSHkMAMRRV4"><i class="fa fa-youtube"></i></a></li>
                         <li><a href=""><i class="fa fa-pinterest"></i></a></li>
                      </ul>
