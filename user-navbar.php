@@ -11,9 +11,7 @@
 
 
                         <li><a data-scroll href="about.php">About us</a></li>
-                        <!-- <li><a data-scroll href="service.php">Services</a></li>
-
-                        <li><a data-scroll href="about.php">About us</a></li> -->
+                      
                         <li class="dropdownn">
                            <a href="service.php" class="dropdown-toggle" data-toggle="dropdown">Services</a>
                            <div class="dropdownn-menu" style="display: none;">

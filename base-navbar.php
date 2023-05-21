@@ -14,6 +14,10 @@
                               <li><a  href="price.php">Price</a></li>
                               <li><a  href="testimonials.php">Testimonials</a></li>
                               <li><a data-scroll href="contact.html">Contact</a></li>
+                              <li><a data-scroll href="login.php">Log in</a>      </li>
+                        <div class="userinfo">
+                     <?php include("showtheinfo.php"); ?>
+                       </div>
                            </ul>
                         </div>
                      </nav>

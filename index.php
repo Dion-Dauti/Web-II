@@ -1,4 +1,5 @@
-<?php session_start();?>
+<?php session_start();
+include 'connection.php'?>
 !DOCTYPE html>
 <html lang="en">
    <!-- Basic -->
@@ -78,61 +79,27 @@
                </div>
             </div>
          </div>
-         <div class="header-bottom wow fadeIn">
-            <div class="container">
-               <nav class="main-menu">
-                  <div class="navbar-header">
-                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i class="fa fa-bars" aria-hidden="true"></i></button>
-                  </div>
-              
-                  <div id="navbar" class="navbar-collapse collapse">
-                     <ul class="nav navbar-nav">
-                        <li><a class="active" href="index.php">Home</a></li>
-
-
-                        <li><a data-scroll href="about.php">About us</a></li>
-                        <!-- <li><a data-scroll href="service.php">Services</a></li>
-
-                        <li><a data-scroll href="about.php">About us</a></li> -->
-                        <li class="dropdownn">
-                           <a href="service.php" class="dropdown-toggle" data-toggle="dropdown">Services</a>
-                           <div class="dropdownn-menu" style="display: none;">
-                              <ul>
-                                 <li><a href="servicess.php">Change data</a></li>
-                                 <li><a href="services2.html">Medical Services</a></li>
-
-                                 <li><a href="services3.html">Mental health services</a></li>
-
-                               
-
-                              </ul>
-                           </div>
-                        </li>
-                         
-
-                        <li><a   href="doctors.php">Doctors</a></li>
-                        <li><a data-scroll href="price.php">Price</a></li>
-                  <li><a data-scroll href="testimonials.php">Testimonials</a></li>
-                        <li><a data-scroll href="contact.html">Contact</a>      </li>
-                        <div class="userinfo">
-                     <?php include("showtheinfo.php"); ?>
-                       </div>
-                        
-                  
-                        
-                        
-                       
-                      <!--e shtojme nje buton dhe mrena butonit linkun per logout.php-->
-                     
-                  
-                  </div>
- 
-               </nav>
-               
-
-              
-            </div>
-         </div>
+         <?php
+        if (!isset($_SESSION['user_id'])) {
+         // User is not logged in, include base navigation bar
+         include('base-navbar.php');
+     } else {
+         // Fetch the user's role from the session
+         $role = $_SESSION['user_role'];
+     
+         // Include the appropriate navigation bar based on the user's role
+         if ($role === 'user') {
+             include('user-navbar.php');
+         } elseif ($role === 'admin') {
+             include('admin-navbar.php');
+         } else {
+             // User has no role defined, include base navigation bar
+             include('base-navbar.php');
+         }
+     }
+     
+     $conn->close();
+     ?>
       </header>
 
 
