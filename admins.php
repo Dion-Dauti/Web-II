@@ -1,4 +1,5 @@
-
+<?php session_start();
+include 'connection.php';?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -85,9 +86,7 @@
     
         <body class="clinic_version">
             <!-- LOADER -->
-            <!-- <div id="preloader">
-               <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
-            </div> -->
+            <!--  -->
             <!-- END LOADER -->
             <header>
                <div class="header-top wow fadeIn">
@@ -111,7 +110,27 @@
                      </div>
                   </div>
                </div>
-    <?php include('admin-navbar.php') ?>          
+               <?php
+        if (!isset($_SESSION['user_id'])) {
+         // User is not logged in, include base navigation bar
+         include('base-navbar.php');
+     } else {
+         // Fetch the user's role from the session
+         $role = $_SESSION['user_role'];
+     
+         // Include the appropriate navigation bar based on the user's role
+         if ($role === 'user') {
+             include('user-navbar.php');
+         } elseif ($role === 'admin') {
+             include('admin-navbar.php');
+         } else {
+             // User has no role defined, include base navigation bar
+             include('base-navbar.php');
+         }
+     }
+     
+     $conn->close();
+     ?>        
 <div class="container-fluid whatdoInamethis">
    <div class="col-md-12">
       <div class="row">

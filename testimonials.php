@@ -1,3 +1,5 @@
+<?php session_start();
+include 'connection.php';?>
 <!DOCTYPE html>
 <html lang="en">
    <!-- Basic -->
@@ -28,14 +30,28 @@
    <link rel="stylesheet" href="css/custom.css">
    <!-- Modernizer for Portfolio -->
    <script src="js/modernizer.js"></script>
+   <script src="https://kit.fontawesome.com/72b475b245.js" crossorigin="anonymous"></script>
+   <style>
+
+
+
+
+/* ikona per shfaqjen e emrit */
+.userinfo{
+   margin-left:500px;
+   margin-top: 5px;
+   
+}
+
+
+
+   </style>
    <!-- [if lt IE 9] -->
    </head>
     
         <body class="clinic_version">
             <!-- LOADER -->
-            <!-- <div id="preloader">
-               <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
-            </div> -->
+            
             <!-- END LOADER -->
             <header>
                <div class="header-top wow fadeIn">
@@ -59,35 +75,27 @@
                      </div>
                   </div>
                </div>
-               <div class="header-bottom wow fadeIn">
-                  <div class="container">
-                     <nav class="main-menu">
-                        <div class="navbar-header">
-                           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i class="fa fa-bars" aria-hidden="true"></i></button>
-                        </div>
-                        
-                        <div id="navbar" class="navbar-collapse collapse">
-                           <ul class="nav navbar-nav">
-                              <li><a class="active" href="index.html">Home</a></li>
-                              <li><a  href="about.php">About us</a></li>
-                              <li><a  href="service.php">Service</a></li>
-                              <li><a  href="doctors.php">Doctors</a></li>
-                              <li><a  href="price.php">Price</a></li>
-                              <li><a  href="testimonials.php">Testimonials</a></li>
-                              <li><a data-scroll href="contact.php">Contact</a></li>
-                              <li><a  href="about.html">About us</a></li>
-                            <li><a  href="service.html">Services</a></li>
-                        
-                         <li><a  href="doctors.html">Doctors</a></li>
-                              <li><a  href="price.html">Price</a></li>
-                              <li><a  href="testimonials.html">Testimonials</a></li>
-                              <li><a data-scroll href="contact.html">Contact</a></li>
-                           </ul>
-                        </div>
-                     </nav>
-                     
-                  </div>
-               </div>
+               <?php
+        if (!isset($_SESSION['user_id'])) {
+         // User is not logged in, include base navigation bar
+         include('base-navbar.php');
+     } else {
+         // Fetch the user's role from the session
+         $role = $_SESSION['user_role'];
+     
+         // Include the appropriate navigation bar based on the user's role
+         if ($role === 'user') {
+             include('user-navbar.php');
+         } elseif ($role === 'admin') {
+             include('admin-navbar.php');
+         } else {
+             // User has no role defined, include base navigation bar
+             include('base-navbar.php');
+         }
+     }
+     
+     $conn->close();
+     ?>
             </header>
 
   
@@ -101,7 +109,7 @@
                 <div class="container">
                    <div class="heading">
                       <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
-                      <h2>Testimonials</h2>
+                      <h2 >Testimonials</h2>
                    </div>
                    <!-- end title -->
                    <div class="row">
@@ -276,3 +284,16 @@
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
     </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+   $(document).ready(function() {
+      $('.dropdownn').hover(
+         function() {
+            $(this).find('.dropdownn-menu').css('display', 'block');
+         },
+         function() {
+            $(this).find('.dropdownn-menu').css('display', 'none');
+         }
+      );
+   });
+</script>

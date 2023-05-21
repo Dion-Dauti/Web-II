@@ -1,4 +1,5 @@
-
+<?php session_start();
+include 'connection.php';?>
 
     <!DOCTYPE html>
 <html lang="en">
@@ -39,13 +40,11 @@
    <!-- [if lt IE 9] -->
     </head>
 		
-  <?php session_start();?>
+  
     
         <body class="clinic_version">
             <!-- LOADER -->
-            <!-- <div id="preloader">
-               <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
-            </div> -->
+            <!--  -->
             <!-- END LOADER -->
             <header>
                <div class="header-top wow fadeIn">
@@ -69,34 +68,27 @@
                      </div>
                   </div>
                </div>
-               <div class="header-bottom wow fadeIn">
-   <div class="container">
-      <nav class="main-menu">
-      <div style="background-color: #157fda;">
-    <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: center;">
-        <li><a class="active" href="index.php" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Home</a></li>
-        <li><a data-scroll href="#about" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">About us</a></li>
-        <li><a data-scroll href="#service" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Patient</a></li>
-        <li><a href="admin-doctors.php" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Doctors</a></li>
-        <li><a data-scroll href="#getintouch" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Contact</a></li>
-    </ul>
-</div>
-
-      </nav>
-      <div class="serch-bar">
-         <div id="custom-search-input">
-            <div class="input-group col-md-12">
-               <input type="text" class="form-control input-lg" placeholder="Search" />
-               <span class="input-group-btn">
-                  <button class="btn btn-info btn-lg" type="button">
-                     <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-               </span>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
+               <?php
+        if (!isset($_SESSION['user_id'])) {
+         // User is not logged in, include base navigation bar
+         include('base-navbar.php');
+     } else {
+         // Fetch the user's role from the session
+         $role = $_SESSION['user_role'];
+     
+         // Include the appropriate navigation bar based on the user's role
+         if ($role === 'user') {
+             include('user-navbar.php');
+         } elseif ($role === 'admin') {
+             include('admin-navbar.php');
+         } else {
+             // User has no role defined, include base navigation bar
+             include('base-navbar.php');
+         }
+     }
+     
+     $conn->close();
+     ?>
 
 
 

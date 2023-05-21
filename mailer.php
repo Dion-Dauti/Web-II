@@ -26,7 +26,7 @@ include 'connection.php';
         // Insertion successful
         
 	 
-        header("Location: contact.html");
+        header("Location: contact.php");
     } else {
         // Error occurred
         echo "Error: " . $stmt->error;
